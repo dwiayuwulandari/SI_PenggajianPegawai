@@ -22,4 +22,17 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('beranda');
 	}
+	public function Data_Karyawan()
+	{
+		$this->load->view('Data_Karyawan');
+	}
+	public function Gaji_Karyawan()
+	{
+		$this->load->view('Gaji_Karyawan');
+	}
+	public function Transfer_Gaji()
+	{
+		$this->load->view('Transfer_Gaji');
+	}
+
 }

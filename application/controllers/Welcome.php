@@ -26,9 +26,17 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('data_karyawan');
 	}
+	public function Tambah_Data_Karyawan()
+	{
+		$this->load->view('Tambah_Data_Karyawan');
+	}
 	public function gaji_karyawan()
 	{
 		$this->load->view('gaji_karyawan');
+	}
+	public function Tambah_Data_Gaji_Karyawan()
+	{
+		$this->load->view('Tambah_Data_Gaji_Karyawan');	
 	}
 	public function transfer_gaji()
 	{

@@ -187,7 +187,7 @@
                          <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-18">
-                          <a href="Tambah_Data_Gaji_Karyawan.html">
+                          <a href="<?php echo base_url()."index.php/Welcome/Tambah_Data_Gaji_Karyawan"; ?>">
                           <button type="submit" class="btn btn-success">Tambah Data Gaji Karyawan</button></a>
                         </div>
                       </div>

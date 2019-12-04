@@ -10,7 +10,7 @@
     <title>CV. Karya Agung Jaya</title>
 
     <!-- Bootstrap -->
-    <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link href="<?php echo base_url();?>assets/sigap/cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link href="<?php echo base_url();?>assets/sigap/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="<?php echo base_url();?>assets/sigap/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="<?php echo base_url(); ?>assets/sigap/production/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -57,14 +57,14 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                    <li><a href="index.php"><i class="fa fa-home"></i> Dashboard </a></li>
-                    <li><a href="Data_Karyawan.php"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                      <li><a href="Gaji_Karyawan.php"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
-                       <li><a href="Transfer_Gaji.php"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
+                    <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
+                    <li><a href="<?php echo base_url()."index.php/welcome/Data_Karyawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                      <li><a href="<?php echo base_url()."index.php/welcome/gaji_karyawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+                       <li><a href="<?php echo base_url()."index.php/welcome/Transfer_Gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
                       <li><a><i class="fa fa-list-ul"></i> Riyawat Gaji <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="Cetak_slip.php">Cetak Slip</a></li>
-                          <li><a href="laporan.php">Laporan</a></li>
+                        <li><a href="<?php echo base_url()."index.php/Welcome/Cetak_slip"; ?>">Cetak Slip</a></li>
+                          <li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan</a></li>
                       </ul>
                       </li>
                 </ul>
@@ -102,7 +102,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="images/img.jpg" alt="">John Doe
+                      <img src="images/img.jpg" alt="">Imam Basori
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;"> Profile</a>

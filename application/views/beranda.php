@@ -41,7 +41,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="<?php echo base_url(); ?>assets/sigap/production/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -56,14 +56,14 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-    	              <li><a href="<?php echo base_url()."Welcome/beranda"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-	                  <li><a href="<?php echo base_url()."Welcome/Data_Karyawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                  	  <li><a href="<?php echo base_url()."Welcome/Gaji_Karyawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
-                      <li><a href="<?php echo base_url()."Welcome/Transfer_Gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
+    	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/welcome/data_karyawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/welcome/gaji_karyawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+                      <li><a href="<?php echo base_url()."index.php/Welcome/transfer_gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riyawat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">
-                     	 	<li><a href="Cetak_slip.html">Cetak Slip</a></li>
-                      	 	<li><a href="laporan.html">Laporan</a></li>
+                     	 	<li><a href="<?php echo base_url()."index.php/Welcome/Cetak_slip"; ?>">Cetak Slip</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan</a></li>
                     	</ul>
                   	  </li>
                 </ul>

@@ -22,17 +22,25 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('beranda');
 	}
-	public function Data_Karyawan()
+	public function data_karyawan()
 	{
-		$this->load->view('Data_Karyawan');
+		$this->load->view('data_karyawan');
 	}
-	public function Gaji_Karyawan()
+	public function gaji_karyawan()
 	{
-		$this->load->view('Gaji_Karyawan');
+		$this->load->view('gaji_karyawan');
 	}
-	public function Transfer_Gaji()
+	public function transfer_gaji()
 	{
-		$this->load->view('Transfer_Gaji');
+		$this->load->view('transfer_gaji');
+	}
+	public function Cetak_slip()
+	{
+		$this->load->view('Cetak_slip');
+	}
+	public function laporan()
+	{
+		$this->load->view('laporan');
 	}
 
 }

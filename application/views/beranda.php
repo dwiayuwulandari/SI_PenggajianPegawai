@@ -11,20 +11,20 @@
     <title>CV. Karya Agung Jaya</title>
 
     <!-- Bootstrap -->
-    <link href="<?php echo base_url();?>assets/sigap/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/sigap/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="<?php echo base_url();?>assets/sigap/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/sigap/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="<?php echo base_url();?>assets/sigap/nprogress/nprogress.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/sigap/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="<?php echo base_url();?>assets/sigap/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/sigap/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 	
     <!-- bootstrap-progressbar -->
-    <link href="<?php echo base_url();?>assets/sigap/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/sigap/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="<?php echo base_url();?>assets/sigap/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="<?php echo base_url();?>assets/sigap/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="<?php echo base_url();?>assets/sigap/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/sigap/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url(); ?>assets/sigap/build/css/custom.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-    	              <li><a href="<?php echo base_url()."Welcome/index"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
+    	              <li><a href="<?php echo base_url()."Welcome/beranda"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
 	                  <li><a href="<?php echo base_url()."Welcome/Data_Karyawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
                   	  <li><a href="<?php echo base_url()."Welcome/Gaji_Karyawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                       <li><a href="<?php echo base_url()."Welcome/Transfer_Gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
@@ -817,42 +817,42 @@
     </div>
 
     <!-- jQuery -->
-    <script src="<?php echo base_url();?>assets/sigap/jquery/dist/jquery.min.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="<?php echo base_url();?>assets/sigap/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <script src="<?php echo base_url();?>assets/sigap/fastclick/lib/fastclick.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="<?php echo base_url();?>assets/sigap/nprogress/nprogress.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/nprogress/nprogress.js"></script>
     <!-- Chart.js -->
-    <script src="<?php echo base_url();?>assets/sigap/Chart.js/dist/Chart.min.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- gauge.js -->
-    <script src="<?php echo base_url();?>assets/sigap/gauge.js/dist/gauge.min.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/gauge.js/dist/gauge.min.js"></script>
     <!-- bootstrap-progressbar -->
-    <script src="<?php echo base_url();?>assets/sigap/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <script src="<?php echo base_url();?>assets/sigap/iCheck/icheck.min.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/iCheck/icheck.min.js"></script>
     <!-- Skycons -->
-    <script src="<?php echo base_url();?>assets/sigap/skycons/skycons.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/skycons/skycons.js"></script>
     <!-- Flot -->
-    <script src="<?php echo base_url();?>assets/sigap/Flot/jquery.flot.js"></script>
-    <script src="<?php echo base_url();?>assets/sigap/Flot/jquery.flot.pie.js"></script>
-    <script src="<?php echo base_url();?>assets/sigap/Flot/jquery.flot.time.js"></script>
-    <script src="<?php echo base_url();?>assets/sigap/Flot/jquery.flot.stack.js"></script>
-    <script src="<?php echo base_url();?>assets/sigap/Flot/jquery.flot.resize.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/Flot/jquery.flot.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
-    <script src="<?php echo base_url();?>assets/sigap/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="<?php echo base_url();?>assets/sigap/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="<?php echo base_url();?>assets/sigap/flot.curvedlines/curvedLines.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/flot.curvedlines/curvedLines.js"></script>
     <!-- DateJS -->
-    <script src="<?php echo base_url();?>assets/sigap/DateJS/build/date.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/DateJS/build/date.js"></script>
     <!-- JQVMap -->
-    <script src="<?php echo base_url();?>assets/sigap/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="<?php echo base_url();?>assets/sigap/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="<?php echo base_url();?>assets/sigap/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="<?php echo base_url();?>assets/sigap/moment/min/moment.min.js"></script>
-    <script src="<?php echo base_url();?>assets/sigap/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/moment/min/moment.min.js"></script>
+    <script src="<?php echo base_url();?>assets/sigap/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="<?php echo base_url(); ?>assets/sigap/build/js/custom.min.js"></script>

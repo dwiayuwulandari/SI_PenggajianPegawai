@@ -105,7 +105,7 @@
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;"> Profile</a>
                         <a class="dropdown-item"  href="javascript:;">
-                          <span class="badge bg-red pull-right">50%</span>
+                          <span class="badge bg-red pull-right"></span>
                           <span>Settings</span>
                         </a>
                     <a class="dropdown-item"  href="javascript:;">Help</a>

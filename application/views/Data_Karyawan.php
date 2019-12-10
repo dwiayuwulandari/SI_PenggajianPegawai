@@ -107,7 +107,7 @@
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;"> Profile</a>
                         <a class="dropdown-item"  href="javascript:;">
-                          <span class="badge bg-red pull-right">50%</span>
+                          <span class="badge bg-red pull-right"></span>
                           <span>Settings</span>
                         </a>
                     <a class="dropdown-item"  href="javascript:;">Help</a>
@@ -183,7 +183,7 @@
                        
                        
                         <tr>
-                          <td>Donna Snider</td>
+                          <td>Donna Donni</td>
                           <td>Serabutan</td>
                           <td>Jember, 12-08-1998</td>
                           <td>Laki-Laki</td>

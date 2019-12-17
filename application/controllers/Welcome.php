@@ -34,7 +34,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('Data_karyawan');
 	}
-	public function karyawan1()
+	public function datakaryawan()
 	{
 		$data['karyawan']=$this->M_data->getAll();
 		$this->load->view('view_karyawan',$data);
@@ -47,7 +47,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('gaji_karyawan');
 	}
-	public function gaji1()
+	public function gajikaryawan()
 	{
 		$data['gaji']=$this->M_bagian->getAll();
 		$this->load->view('view_gaji_karyawan',$data);

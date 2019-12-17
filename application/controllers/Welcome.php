@@ -24,7 +24,7 @@ class Welcome extends CI_Controller {
 	}
 	public function data_karyawan()
 	{
-		$this->load->view('data_karyawan');
+		$this->load->view('Data_karyawan');
 	}
 	public function Tambah_Data_Karyawan()
 	{

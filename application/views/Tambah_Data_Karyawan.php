@@ -143,30 +143,30 @@
                   </div>
                   <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <form id="demo-form2" action="<?php echo base_url()."welcome/" ?>" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nama Lengkap <span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" name="nama_karyawan" for="first-name">Nama Lengkap <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                           <input type="text" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Bagian <span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" name="bagian_karyawan" for="last-name">Bagian <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                           <input type="text" id="last-name" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Tempat Tanggal Lahir</label>
+                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align" name="ttl_karyawan">Tempat Tanggal Lahir</label>
                         <div class="col-md-6 col-sm-6 ">
                           <input id="middle-name" class="form-control" type="text" name="middle-name">
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">Jenis Kelamin</label>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" name="jenis_kelamin">Jenis Kelamin</label>
                         <div class="col-md-6 col-sm-6 ">
                           <div id="gender" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
@@ -179,7 +179,7 @@
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align">Alamat <span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" name="no_rekening">No Rekening <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                           <input id="birthday" class="date-picker form-control" required="required" type="text">

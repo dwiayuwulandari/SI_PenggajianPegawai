@@ -57,8 +57,8 @@
               <div class="menu_section">
                 <ul class="nav side-menu">
     	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-	                  <li><a href="<?php echo base_url()."index.php/welcome/data_karyawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                  	  <li><a href="<?php echo base_url()."index.php/welcome/gaji_karyawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/welcome/karyawan1"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/welcome/gaji1"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                       <li><a href="<?php echo base_url()."index.php/Welcome/transfer_gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">

@@ -3,6 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
+
+	public function __construct()
+    {
+        parent::__construct();
+		$this->load->model('M_data');
+		$this->load->model('M_bagian');
+    }
+	
 	/**
 	 * Index Page for this controller.
 	 *
@@ -26,6 +34,11 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('Data_karyawan');
 	}
+	public function karyawan1()
+	{
+		$data['karyawan']=$this->M_data->getAll();
+		$this->load->view('view_karyawan',$data);
+	}
 	public function Tambah_Data_Karyawan()
 	{
 		$this->load->view('Tambah_Data_Karyawan');
@@ -33,6 +46,11 @@ class Welcome extends CI_Controller {
 	public function gaji_karyawan()
 	{
 		$this->load->view('gaji_karyawan');
+	}
+	public function gaji1()
+	{
+		$data['gaji']=$this->M_bagian->getAll();
+		$this->load->view('view_gaji_karyawan',$data);
 	}
 	public function Tambah_Data_Gaji_Karyawan()
 	{

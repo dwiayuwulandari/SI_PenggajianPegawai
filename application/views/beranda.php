@@ -162,13 +162,13 @@
                     <div>
                       
                       <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80"></div>
+                        <div class="progress progress_sm" style="">
+                          <div class="progress-bar bg-green" ></div>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <p>Twitter Campaign</p>
+                      <p></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
                           <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
@@ -178,7 +178,7 @@
                   </div>
                   <div class="col-md-12 col-sm-12 ">
                     <div>
-                      <p>Conventional Media</p>
+                      <p></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
                           <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="40"></div>
@@ -186,7 +186,7 @@
                       </div>
                     </div>
                     <div>
-                      <p>Bill boards</p>
+                      <p></p>
                       <div class="">
                         <div class="progress progress_sm" style="width: 76%;">
                           <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50"></div>

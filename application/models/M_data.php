@@ -13,6 +13,12 @@ class M_data extends CI_Model {
     public function getAll()
     {
         return $this->db->get($this->_table)->result();
-	}
+    }
+    
+    public function getTransfer()
+    {
+        $query = $this->db->query("SELECT data_karyawan.nama_karyawan, data_bagian.bagian_karyawan, data_bagian.gaji_karyawan, data_karyawan.no_rekening FROM data_karyawan, data_bagian WHERE data_karyawan.bagian_karyawan = data_bagian.bagian_karyawan");
+        return $query->result();
+    }
 
 }

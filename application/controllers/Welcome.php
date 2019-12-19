@@ -9,6 +9,7 @@ class Welcome extends CI_Controller {
         parent::__construct();
 		$this->load->model('M_data');
 		$this->load->model('M_bagian');
+		$this->load->model('Crud_karyawan');
     }
 	
 	/**
@@ -43,6 +44,19 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('Tambah_Data_Karyawan');
 	}
+
+	public function fungsitambahkaryawan(){
+		$data = [
+			'nama_karyawan' => $this->input->post('nama_karyawan'),
+			'bagian_karyawan' => $this->input->post('bagian_karyawan'),
+			'no_rekening' => $this->input->post('no_rekening'),
+			'jenis_kelamin' => $this->input->post('jenis_kelamin'),	
+			'ttl_karyawan' => $this->input->post('ttl_karyawan')
+		];
+
+		$this->Crud_karyawan->karyawan($data);
+		redirect('Welcome/datakaryawan');
+	}
 	public function gaji_karyawan()
 	{
 		$this->load->view('gaji_karyawan');
@@ -58,7 +72,8 @@ class Welcome extends CI_Controller {
 	}
 	public function transfer_gaji()
 	{
-		$this->load->view('transfer_gaji');
+		$data['transfer']=$this->M_data->getTransfer();
+		$this->load->view('transfer_gaji', $data);
 	}
 	public function Cetak_slip()
 	{

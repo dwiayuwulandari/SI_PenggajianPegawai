@@ -143,26 +143,26 @@
                   </div>
                   <div class="x_content">
                     <br />
-                    <form id="demo-form2" action="<?php echo base_url()."welcome/" ?>" data-parsley-validate class="form-horizontal form-label-left">
+                    <?= form_open_multipart('Welcome/fungsitambahkaryawan'); ?>
 
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" name="nama_karyawan" for="first-name">Nama Lengkap <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" id="first-name" required="required" class="form-control ">
+                          <input type="text" name="nama_karyawan" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" name="bagian_karyawan" for="last-name">Bagian <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control">
+                          <input type="text" id="last-name" name="bagian_karyawan" required="required" class="form-control">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align" name="ttl_karyawan">Tempat Tanggal Lahir</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input id="middle-name" class="form-control" type="text" name="middle-name">
+                          <input id="middle-name" class="form-control" type="text" name="ttl_karyawan">
                         </div>
                       </div>
                       <div class="item form-group">
@@ -170,10 +170,10 @@
                         <div class="col-md-6 col-sm-6 ">
                           <div id="gender" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="male" class="join-btn"> &nbsp; Perempuan &nbsp;
+                              <input type="radio" name="jenis_kelamin" value="perempuan" class="join-btn"> &nbsp; Perempuan &nbsp;
                             </label>
                             <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="female" class="join-btn"> Laki-Laki
+                              <input type="radio" name="jenis_kelamin" value="laki-laki" class="join-btn"> Laki-Laki
                             </label>
                           </div>
                         </div>
@@ -182,7 +182,7 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" name="no_rekening">No Rekening <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input id="birthday" class="date-picker form-control" required="required" type="text">
+                          <input id="birthday" name="no_rekening" class="date-picker form-control" required="required" type="text">
                         </div>
                       </div>
                       <div class="ln_solid"></div>
@@ -194,7 +194,7 @@
                         </div>
                       </div>
 
-                    </form>
+                    <?php form_close(); ?>
                   </div>
                 </div>
               </div>

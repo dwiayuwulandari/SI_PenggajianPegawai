@@ -166,19 +166,22 @@
 
 
                       <tbody>
-                        <tr>
-                          <td>Arif Wiranto</td>
-                          <td>Administrasi</td>
-                          <td>Rp 2.500.000</td>
-                          <td> 719101001xxx507</td>
-                        </tr>
-
-                        <tr>
-                          <td>Donna Snider</td>
-                          <td>Serabutan</td>
-                          <td>Rp 1.500.000</td>
-                          <td>719101001xxx508</td>
-                        </tr>
+                      <?php   
+                        
+                        foreach ($transfer as $i): ?>
+                  <tr>
+    
+                   
+                    <td><?php echo $i->nama_karyawan ?></td>
+                    <td><?php echo $i->bagian_karyawan ?></td>
+                    <td><?php echo $i->gaji_karyawan ?></td>
+                    <td><?php echo $i->no_rekening ?></td>
+                    
+                  
+                  </tr>
+                    <?php 
+                    
+                 endforeach;?>
                       </tbody>
                     </table>
                   </div>

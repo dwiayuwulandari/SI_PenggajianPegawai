@@ -10,6 +10,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('M_data');
 		$this->load->model('M_bagian');
 		$this->load->model('Crud_karyawan');
+		$this->load->model('Crud_bagian');
     }
 	
 	/**
@@ -70,6 +71,15 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('Tambah_Data_Gaji_Karyawan');	
 	}
+	public function fungsitambahgaji(){
+		$data = [
+			'bagian_karyawan' => $this->input->post('bagian_karyawan'),
+			'gaji_karyawan' => $this->input->post('gaji_karyawan')
+		];
+
+		$this->Crud_bagian->bagian($data);
+		redirect('Welcome/gajikaryawan');
+	}
 	public function transfer_gaji()
 	{
 		$data['transfer']=$this->M_data->getTransfer();
@@ -77,7 +87,8 @@ class Welcome extends CI_Controller {
 	}
 	public function Cetak_slip()
 	{
-		$this->load->view('Cetak_slip');
+		$data['cetak']=$this->M_data->getCetak();
+		$this->load->view('Cetak_slip',$data);
 	}
 	public function laporan()
 	{

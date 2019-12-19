@@ -182,8 +182,8 @@
                         <td><?php echo $i->no_rekening ?></td>
                         
                         
-                        <td><a><input type="submit" value="edit" class="btn btn-block btn-primary"></a>
-                        <a><input type="submit" value="hapus" class="btn btn-block btn-danger"></a></td>
+                        <td><button class="btn btn-success" type="button">Edit Data</button>
+                        <button type="submit" class="btn btn-danger">Hapus Data</button></td>
                         
                       </tr>
                         <?php 

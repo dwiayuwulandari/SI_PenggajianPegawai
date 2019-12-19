@@ -166,19 +166,23 @@
 
 
                       <tbody>
-                        <tr>
-                          <td>Arif Wiranto</td>
-                          <td>Administrasi</td>
-                          <td>Rp 2.500.000</td>
-                          <td> <button type="submit" class="btn btn-success" >Cetak Slip </button></td>
-                        </tr>
-
-                        <tr>
-                          <td>Donna Donni</td>
-                          <td>Serabutan</td>
-                          <td>Rp 1.500.000</td>
-                          <td> <button type="submit" class="btn btn-success" >Cetak Slip </button></td>
-                        </tr>
+                      <?php   
+                        
+                        foreach ($cetak as $i): ?>
+                  <tr>
+    
+                   
+                    <td><?php echo $i->nama_karyawan ?></td>
+                    <td><?php echo $i->bagian_karyawan ?></td>
+                    <td><?php echo $i->gaji_karyawan ?></td>
+                    
+                    <td><a><input type="submit" value="Cetak Slip" class="btn btn-block btn-success"></a></td>
+                    
+                  
+                  </tr>
+                    <?php 
+                    
+                 endforeach;?>
                       </tbody>
                     </table>
                   </div>

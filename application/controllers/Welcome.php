@@ -94,5 +94,12 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('laporan');
 	}
+	function logout()
+	{
+		$this->session->unset_userdata('username');
+
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda telah keluar</div>');
+		redirect('login');
+	}
 
 }

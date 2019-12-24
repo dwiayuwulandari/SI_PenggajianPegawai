@@ -62,11 +62,11 @@ class login extends CI_Controller {
 		}
 	}
 
-	public function logout()
+	function logout()
 	{
 		$this->session->unset_userdata('username');
 
-		$this->session->set_flashdata('message', '<div class="alert alert-primary" role="alert">anda telah logged out</div>');
-		redirect('login_admin');
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda telah keluar</div>');
+		redirect('login');
 	}
 }

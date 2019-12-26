@@ -58,6 +58,21 @@ class Welcome extends CI_Controller {
 		$this->Crud_karyawan->karyawan($data);
 		redirect('Welcome/datakaryawan');
 	}
+	public function Edit_Data_Karyawan()
+	{
+		$this->load->view('Edit_Data_Karyawan');
+	}
+	public function edit_karyawan($id_karyawan = null)
+    {
+        if ($this->input->post('submit')){
+			$this->M_data->updatekaryawan($id_karyawan);
+			redirect('Welcome/datakaryawan');
+		}
+
+        $data["i"] = $this->M_data->getById($id_karyawan);
+        $this->load->view('Edit_Data_Karyawan', $data);
+    }
+
 	public function gaji_karyawan()
 	{
 		$this->load->view('gaji_karyawan');

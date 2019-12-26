@@ -7,6 +7,6 @@ class Crud_karyawan extends CI_Model {
     {
 		$this->db->insert('data_karyawan', $data);
    }
-  
+
 }
 

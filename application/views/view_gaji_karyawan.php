@@ -153,7 +153,7 @@
                       <thead>
                         <tr>
                           <th>Bagian</th>
-                          <th>Total Gaji</th>
+                          <th>Gaji Pokok</th>
                           <th>Aksi</th>             
                         </tr>
                       </thead>

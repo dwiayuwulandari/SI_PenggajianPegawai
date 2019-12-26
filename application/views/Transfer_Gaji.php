@@ -153,7 +153,7 @@
                         <tr>
                           <th>Nama</th>
                           <th>Bagian</th>
-                          <th>Total Gaji</th>
+                          <th>Gaji Pokok</th>
                           <th>No Rekening</th>
                         
                         </tr>

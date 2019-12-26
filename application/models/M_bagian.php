@@ -7,6 +7,8 @@ class M_bagian extends CI_Model {
     public $id_bagian;
     public $bagian_karyawan;
     public $gaji_karyawan;
+    public $potongan_askes;
+    public $total_gaji;
 
 
     public function getAll()

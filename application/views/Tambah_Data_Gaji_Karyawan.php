@@ -152,10 +152,24 @@
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Total Gaji <span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Gaji Pokok <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                           <input type="text" name="gaji_karyawan" id="last-name" name="last-name" required="required" class="form-control">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Potongan Askes<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="potongan_askes" id="first-name" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Total Gaji <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="total_gaji" id="last-name" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
 

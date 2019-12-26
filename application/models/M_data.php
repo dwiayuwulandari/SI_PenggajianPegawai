@@ -21,12 +21,12 @@ class M_data extends CI_Model {
     }
     public function getTransfer()
     {
-        $query = $this->db->query("SELECT data_karyawan.nama_karyawan, data_bagian.bagian_karyawan, data_bagian.gaji_karyawan, data_karyawan.no_rekening FROM data_karyawan, data_bagian WHERE data_karyawan.bagian_karyawan = data_bagian.bagian_karyawan");
+        $query = $this->db->query("SELECT data_karyawan.nama_karyawan, data_bagian.bagian_karyawan, data_bagian.total_gaji, data_karyawan.no_rekening FROM data_karyawan, data_bagian WHERE data_karyawan.bagian_karyawan = data_bagian.bagian_karyawan");
         return $query->result();
     }
     public function getCetak()
     {
-        $query = $this->db->query("SELECT data_karyawan.nama_karyawan, data_bagian.bagian_karyawan, data_bagian.gaji_karyawan FROM data_karyawan, data_bagian WHERE data_karyawan.bagian_karyawan = data_bagian.bagian_karyawan");
+        $query = $this->db->query("SELECT data_karyawan.nama_karyawan, data_bagian.bagian_karyawan, data_bagian.gaji_karyawan, data_bagian.potongan_askes, data_bagian.total_gaji  FROM data_karyawan, data_bagian WHERE data_karyawan.bagian_karyawan = data_bagian.bagian_karyawan");
         return $query->result();
     }
     public function updatekaryawan($id_karyawan)

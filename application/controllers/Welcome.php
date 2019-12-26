@@ -99,7 +99,9 @@ class Welcome extends CI_Controller {
 	public function fungsitambahgaji(){
 		$data = [
 			'bagian_karyawan' => $this->input->post('bagian_karyawan'),
-			'gaji_karyawan' => $this->input->post('gaji_karyawan')
+			'gaji_karyawan' => $this->input->post('gaji_karyawan'),
+			'potongan_askes' => $this->input->post('potongan_askes'),
+			'total_gaji' => $this->input->post('total_gaji')
 		];
 
 		$this->Crud_bagian->bagian($data);

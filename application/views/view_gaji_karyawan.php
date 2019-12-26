@@ -154,6 +154,8 @@
                         <tr>
                           <th>Bagian</th>
                           <th>Gaji Pokok</th>
+                          <th>Potongan Askes</th>
+                          <th>Total Gaji</th>
                           <th>Aksi</th>             
                         </tr>
                       </thead>
@@ -167,6 +169,8 @@
                         
                        <td><?php echo $a-> bagian_karyawan ?></td>
                         <td><?php echo $a-> gaji_karyawan ?></td>
+                        <td><?php echo $a-> potongan_askes ?></td>
+                        <td><?php echo $a-> total_gaji?></td>
 
                         <td>
                           <a href="<?php echo base_url('index.php/Welcome/edit_karyawan/'.$a->id_bagian) ?>"><button class="btn btn-success" type="button">Edit</button></a>

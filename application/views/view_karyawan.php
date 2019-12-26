@@ -179,7 +179,7 @@
                         
                         <td> 
                           <a href="<?php echo base_url('index.php/Welcome/edit_karyawan/'.$i->id_karyawan) ?>"><button class="btn btn-success" type="button">Edit</button></a>
-                          <a><button type="submit" class="btn btn-danger">Hapus</button></a>
+                          <a href="<?php echo base_url('index.php/Welcome/hapus_karyawan/'.$i->id_karyawan) ?>"><button type="submit" class="btn btn-danger">Hapus</button></a>
                         </td>
                         
                       </tr>

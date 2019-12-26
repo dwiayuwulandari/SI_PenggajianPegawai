@@ -40,5 +40,9 @@ class M_data extends CI_Model {
         $this->ttl_karyawan = $post["ttl_karyawan"];
         $this->db->update($this->_table, $this, array("id_karyawan" => $id_karyawan));
     }
+    public function deletekaryawan($id_karyawan)
+    {
+        return $this->db->delete($this->_table, array("id_karyawan" => $id_karyawan));
+    }
 
 }

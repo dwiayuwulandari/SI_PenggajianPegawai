@@ -71,8 +71,18 @@ class Welcome extends CI_Controller {
 
         $data["i"] = $this->M_data->getById($id_karyawan);
         $this->load->view('Edit_Data_Karyawan', $data);
-    }
-
+	}
+	public function hapus_karyawan($id_karyawan = null)
+    {
+		if($id_karyawan) {
+			$this->M_data->deletekaryawan($id_karyawan);
+			$this->session->set_flashdata('message','Data telah dihapus');
+			redirect('Welcome/datakaryawan');
+		} else {
+			$this->session->set_flashdata('message','Record Not Found');
+			redirect('Welcome/datakaryawan');
+		}
+	}
 	public function gaji_karyawan()
 	{
 		$this->load->view('gaji_karyawan');

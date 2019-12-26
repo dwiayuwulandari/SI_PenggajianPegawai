@@ -190,7 +190,8 @@
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <button class="btn btn-primary" type="button">Batal</button>
+                        <a href="<?php echo base_url()."index.php/Welcome/datakaryawan"; ?>">
+                        <button class="btn btn-primary" type="button">Batal</button></a>
                           <input type="submit" name="submit" class="btn btn-success required"></input>
                         </div>
                       </div>

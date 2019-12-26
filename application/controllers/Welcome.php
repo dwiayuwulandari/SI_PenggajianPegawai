@@ -126,5 +126,16 @@ class Welcome extends CI_Controller {
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda telah keluar</div>');
 		redirect('login');
 	}
+	public function hapus_gaji($id_bagian = null)
+    {
+		if($id_bagian) {
+			$this->M_bagian->deletegaji($id_bagian);
+			$this->session->set_flashdata('message','Data telah dihapus');
+			redirect('Welcome/gajikaryawan');
+		} else {
+			$this->session->set_flashdata('message','Record Not Found');
+			redirect('Welcome/gajikaryawan');
+		}
+	}
 
 }

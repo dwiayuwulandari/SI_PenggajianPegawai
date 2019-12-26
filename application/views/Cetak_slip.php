@@ -171,9 +171,9 @@
                    
                     <td><?php echo $i->nama_karyawan ?></td>
                     <td><?php echo $i->bagian_karyawan ?></td>
-                    <td><?php echo $i->gaji_karyawan ?></td>
-                    <td><?php echo $i->potongan_askes ?></td>
-                    <td><?php echo $i->total_gaji ?></td>
+                    <td>Rp. <?php echo $i->gaji_karyawan ?></td>
+                    <td>Rp. <?php echo $i->potongan_askes ?></td>
+                    <td>Rp. <?php echo $i->total_gaji ?></td>
                     
                     <td><a><input type="submit" value="Cetak Slip" class="btn btn-block btn-success"></a></td>
                     

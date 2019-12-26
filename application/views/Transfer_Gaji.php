@@ -169,7 +169,7 @@
                    
                     <td><?php echo $i->nama_karyawan ?></td>
                     <td><?php echo $i->bagian_karyawan ?></td>
-                    <td><?php echo $i->total_gaji ?></td>
+                    <td>Rp. <?php echo $i->total_gaji ?></td>
                     <td><?php echo $i->no_rekening ?></td>
                     
                   

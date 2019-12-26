@@ -155,28 +155,29 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Gaji Pokok <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="gaji_karyawan" id="last-name" name="last-name" required="required" class="form-control">
+                          <input type="text" name="gaji_karyawan" id="txt1" onkeyup="sum();" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Potongan Askes<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="potongan_askes" id="first-name" required="required" class="form-control ">
+                          <input type="text" name="potongan_askes" id="txt2" onkeyup="sum();" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Total Gaji <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="total_gaji" id="last-name" name="last-name" required="required" class="form-control">
+                          <input type="text" name="total_gaji" id="txt3" onkeyup="sum();" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
 
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                          <button class="btn btn-primary" type="button">Batal</button>
+                        <a href="<?php echo base_url()."index.php/Welcome/gajikaryawan"; ?>">
+                        <button class="btn btn-primary" type="button">Batal</button></a>
                           <button type="submit" class="btn btn-success">Tambah Data</button>
                         </div>
                       </div>
@@ -239,6 +240,17 @@
     <script src="<?php echo base_url();?>assets/sigap/vendors/starrr/dist/starrr.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="<?php echo base_url();?>assets/sigap/build/js/custom.min.js"></script>
+
+    <script>
+        function sum() {
+        var txtFirstNumberValue = document.getElementById('txt1').value;
+        var txtSecondNumberValue = document.getElementById('txt2').value;
+        var result = parseFloat(txtFirstNumberValue) - parseFloat(txtSecondNumberValue);
+        if (!isNaN(result)) {
+          document.getElementById('txt3').value = result;
+      }
+    }
+    </script>
 	
   </body>
 </html>

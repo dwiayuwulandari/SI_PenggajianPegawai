@@ -173,7 +173,7 @@
                         <td>Rp. <?php echo $a-> total_gaji?></td>
 
                         <td>
-                          <a href="<?php echo base_url('index.php/Welcome/edit_karyawan/'.$a->id_bagian) ?>"><button class="btn btn-success" type="button">Edit</button></a>
+                          <a href="<?php echo base_url('index.php/Welcome/edit_gaji/'.$a->id_bagian) ?>"><button class="btn btn-success" type="button">Edit</button></a>
                           <a href="<?php echo base_url('index.php/Welcome/hapus_gaji/'.$a->id_bagian) ?>"><button type="submit" class="btn btn-danger">Hapus</button></a>
                         </td>
                     

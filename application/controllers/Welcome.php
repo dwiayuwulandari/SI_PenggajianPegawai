@@ -72,6 +72,10 @@ class Welcome extends CI_Controller {
         $data["i"] = $this->M_data->getById($id_karyawan);
         $this->load->view('Edit_Data_Karyawan', $data);
 	}
+	public function Edit_Data_Gaji()
+	{
+		$this->load->view('Gaji_Karyawan');
+	}
 	public function hapus_karyawan($id_karyawan = null)
     {
 		if($id_karyawan) {
@@ -139,5 +143,13 @@ class Welcome extends CI_Controller {
 			redirect('Welcome/gajikaryawan');
 		}
 	}
-
+	public function edit_gaji($id_bagian = null)
+    {
+        if ($this->input->post('submit')){
+			$this->M_bagian->updategaji($id_bagian);
+			redirect('Welcome/gajikaryawan');
+		}
+        $data["a"] = $this->M_bagian->getById($id_bagian);
+        $this->load->view('Edit_Gaji_Karyawan', $data);
+	}
 }

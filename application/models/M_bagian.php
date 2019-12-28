@@ -15,7 +15,10 @@ class M_bagian extends CI_Model {
     {
         return $this->db->get($this->_table)->result();
     }
-
+    public function getById($id_bagian)
+    {
+        return $this->db->get_where($this->_table, ["id_bagian" => $id_bagian])->row();
+    }
     public function updategaji($id_bagian)
     {
         $post = $this->input->post();

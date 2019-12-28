@@ -135,41 +135,42 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Tambah Data Bagian </h2>
+                    <h2>Edit Data Bagian </h2>
                     <ul class="nav navbar-right panel_toolbox">
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <?= form_open_multipart('Welcome/fungsitambahgaji'); ?>
+                    <form action="<?php echo base_url('index.php/Welcome/edit_gaji/'.$a->id_bagian) ?>" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="bagian_karyawan" id="first-name" required="required" class="form-control ">
+                          <input type="hidden" name="id_bagian" value="<?php echo $a->id_bagian ?>">
+                          <input type="text" name="bagian_karyawan" value="<?php echo $a->bagian_karyawan ?>" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Gaji Pokok <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="gaji_karyawan" id="txt1" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                          <input type="text" name="gaji_karyawan" value="<?php echo $a->gaji_karyawan ?>" id="txt1" onkeyup="sum();" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Potongan Askes<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="potongan_askes" id="txt2" onkeyup="sum();" required="required" class="form-control ">
+                          <input type="text" name="potongan_askes" value="<?php echo $a->potongan_askes ?>" id="txt2" onkeyup="sum();" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Total Gaji <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="total_gaji" id="txt3" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                          <input type="text" name="total_gaji" id="txt3" value="<?php echo $a->total_gaji ?>" onkeyup="sum();" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
 
@@ -178,11 +179,11 @@
                         <div class="col-md-6 col-sm-6 offset-md-3">
                         <a href="<?php echo base_url()."index.php/Welcome/gajikaryawan"; ?>">
                         <button class="btn btn-primary" type="button">Batal</button></a>
-                          <button type="submit" class="btn btn-success">Tambah Data</button>
+                        <input type="submit" name="submit" class="btn btn-success required"></input>
                         </div>
                       </div>
 
-                      <?php form_close(); ?>
+                      </form>
                   </div>
                 </div>
               </div>

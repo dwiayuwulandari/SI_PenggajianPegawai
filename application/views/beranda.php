@@ -125,6 +125,39 @@
               <div class="title_left">
                 <h3>Daftar Proyek</h3>
               </div>
+              
+              <div class="title_right">
+              <ul class="nav navbar-right panel_toolbox">
+     
+              <button type="button" class="btn btn-success btn-round btn-lg" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <i class="fa fa-plus" aria-hidden="true"></i> Tambah Proyek</button>
+            
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                       <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel">Tambah Proyek</h5>
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+            <form action="<?php echo base_url('index.php/Welcome/fungsitambahproyek/') ?>" method="post" >
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Nama Proyek :</label>
+                  <input type="text" name="nama_proyek" class="form-control" id="recipient-name">
+                </div>
+           
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <input type="submit" name="submit" class="btn btn-success"></input>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+              </ul>
 
               <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">

@@ -58,17 +58,16 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <ul class="nav side-menu">
-                <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-                    <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                      <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
-                       <li><a href="<?php echo base_url()."index.php/welcome/Transfer_Gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
-                      <li><a><i class="fa fa-list-ul"></i> Riyawat Gaji <span class="fa fa-chevron-down"></span></a>
-                      <ul class="nav child_menu">
-                        <li><a href="<?php echo base_url()."index.php/Welcome/Cetak_slip"; ?>">Cetak Slip</a></li>
-                          <li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan</a></li>
-                      </ul>
-                      </li>
+              <ul class="nav side-menu">
+    	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+                  	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
+                    	<ul class="nav child_menu">
+                     	 	<li><a>Laporan Mingguan</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan Harian</a></li>
+                    	</ul>
+                  	  </li>
                 </ul>
               </div>             
             </div>
@@ -162,9 +161,16 @@
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align" name="ttl_karyawan">Tempat Tanggal Lahir</label>
+                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align" name="ttl_karyawan">Tempat Lahir</label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input id="middle-name" class="form-control" value="<?php echo $i->ttl_karyawan ?>" type="text" name="ttl_karyawan" >
+                          <input id="middle-name" class="form-control" value="<?php echo $i->tempat_lahir ?>" type="text" name="tempat_lahir" >
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" name="no_rekening">Tanggal Lahir <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="birthday" name="tanggal_lahir" value="<?php echo $i->tanggal_lahir ?>" class="date-picker form-control" required="required" type="text">
                         </div>
                       </div>
                       <div class="item form-group">
@@ -187,11 +193,26 @@
                           <input id="birthday" name="no_rekening" value="<?php echo $i->no_rekening ?>" class="date-picker form-control" required="required" type="text">
                         </div>
                       </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" name="no_rekening">Alamat <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="birthday" name="alamat_karyawan" value="<?php echo $i->alamat_karyawan ?>" class="date-picker form-control" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" name="no_rekening">Nomer Hp <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input id="birthday" name="nomer_hp" value="<?php echo $i->nomer_hp ?>" class="date-picker form-control" required="required" type="text">
+                        </div>
+                      </div>
+                     
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                         <a href="<?php echo base_url()."index.php/Welcome/datakaryawan"; ?>">
-                        <button class="btn btn-primary" type="button">Batal</button></a>
+                        <button class="btn btn-secondary" type="button">Batal</button></a>
                           <input type="submit" name="submit" class="btn btn-success required"></input>
                         </div>
                       </div>

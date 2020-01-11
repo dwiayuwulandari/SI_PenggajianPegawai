@@ -58,17 +58,16 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <ul class="nav side-menu">
-                    <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-                    <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                      <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
-                       <li><a href="<?php echo base_url()."index.php/welcome/Transfer_Gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
-                      <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
-                      <ul class="nav child_menu">
-                        <li><a href="<?php echo base_url()."index.php/Welcome/Cetak_slip"; ?>">Cetak Slip</a></li>
-                          <li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan</a></li>
-                      </ul>
-                      </li>
+              <ul class="nav side-menu">
+    	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+                  	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
+                    	<ul class="nav child_menu">
+                     	 	<li><a>Laporan Mingguan</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan Harian</a></li>
+                    	</ul>
+                  	  </li>
                 </ul>
               </div>             
             </div>
@@ -145,6 +144,14 @@
                     <?= form_open_multipart('Welcome/fungsitambahgaji'); ?>
 
                       <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nama<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                        <input type="hidden" name="id_proyek" id="first-name" value="<?php echo $data = $this->uri->segment(3); ?>" required="required" class="form-control ">
+                          <input type="text" name="nama_karyawan" id="first-name" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
@@ -152,24 +159,73 @@
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Gaji Pokok <span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bulan<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="gaji_karyawan" id="txt1" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                          <input type="text" name="bulan_terima" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Potongan Askes<span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Tanggal Terima<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="potongan_askes" id="txt2" onkeyup="sum();" required="required" class="form-control ">
+                          <input type="text" name="tanggal_terima" id="first-name" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Ongkos Kerja<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="ongkos_kerja" id="txt1" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Uang Makan <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="uang_makan" id="txt2" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Upah Lembur<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="upah_lembur" id="txt3" onkeyup="sum();" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Asuransi Kesehatan<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="asuransi_kesehatan" id="txt4" onkeyup="sum();" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Uang Transport<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="uang_transport" id="txt5" onkeyup="sum();" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Tunjangan Jabatan<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="tunjangan_jabatan" id="txt6" onkeyup="sum();" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bonus<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="bonus" id="txt7" onkeyup="sum();" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Total Gaji <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="total_gaji" id="txt3" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                          <input type="text" name="total_gaji" id="txt8" onkeyup="sum();" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
 
@@ -177,8 +233,8 @@
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                         <a href="<?php echo base_url()."index.php/Welcome/gajikaryawan"; ?>">
-                        <button class="btn btn-primary" type="button">Batal</button></a>
-                          <button type="submit" class="btn btn-success">Tambah Data</button>
+                        <button class="btn btn-secondary" type="button">Batal</button></a>
+                          <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                       </div>
 
@@ -245,9 +301,14 @@
         function sum() {
         var txtFirstNumberValue = document.getElementById('txt1').value;
         var txtSecondNumberValue = document.getElementById('txt2').value;
-        var result = parseFloat(txtFirstNumberValue) - parseFloat(txtSecondNumberValue);
+        var txtTigaNumberValue = document.getElementById('txt3').value;
+        var txtEmpatNumberValue = document.getElementById('txt4').value;
+        var txtLimaNumberValue = document.getElementById('txt5').value;
+        var txtEnamNumberValue = document.getElementById('txt6').value;
+        var txtTujuhNumberValue = document.getElementById('txt7').value;
+        var result = parseFloat(txtFirstNumberValue) + parseFloat(txtSecondNumberValue) + parseFloat(txtTigaNumberValue) + parseFloat(txtEmpatNumberValue) + parseFloat(txtLimaNumberValue)+ parseFloat(txtEnamNumberValue) + parseFloat(txtTujuhNumberValue);
         if (!isNaN(result)) {
-          document.getElementById('txt3').value = result;
+          document.getElementById('txt8').value = result;
       }
     }
     </script>

@@ -58,17 +58,16 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <ul class="nav side-menu">
-                    <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-                    <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                      <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
-                       <li><a href="<?php echo base_url()."index.php/welcome/Transfer_Gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
-                      <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
-                      <ul class="nav child_menu">
-                        <li><a href="<?php echo base_url()."index.php/Welcome/Cetak_slip"; ?>">Cetak Slip</a></li>
-                          <li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan</a></li>
-                      </ul>
-                      </li>
+              <ul class="nav side-menu">
+    	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+                  	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
+                    	<ul class="nav child_menu">
+                     	 	<li><a>Laporan Mingguan</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan Harian</a></li>
+                    	</ul>
+                  	  </li>
                 </ul>
               </div>             
             </div>
@@ -135,42 +134,98 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Edit Data Bagian </h2>
+                    <h2>Edit Data Gaji </h2>
                     <ul class="nav navbar-right panel_toolbox">
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form action="<?php echo base_url('index.php/Welcome/edit_gaji/'.$a->id_bagian) ?>" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <form action="<?php echo base_url('index.php/Welcome/edit_gaji/'.$a->id_gaji) ?>" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nama<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="hidden"  value="<?php echo $a->id_gaji ?>">
+                          <input type="text" name="nama_karyawan" value="<?php echo $a->nama_karyawan ?>" id="first-name" required="required" class="form-control ">
+                        </div>
+                      </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="hidden" name="id_bagian" value="<?php echo $a->id_bagian ?>">
                           <input type="text" name="bagian_karyawan" value="<?php echo $a->bagian_karyawan ?>" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Gaji Pokok <span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bulan<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="gaji_karyawan" value="<?php echo $a->gaji_karyawan ?>" id="txt1" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                          <input type="text" name="bulan_terima" value="<?php echo $a->bulan_terima?>" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Potongan Askes<span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="potongan_askes" value="<?php echo $a->potongan_askes ?>" id="txt2" onkeyup="sum();" required="required" class="form-control ">
+                          <input type="text" name="tanggal_terima" value="<?php echo $a->tanggal_terima ?>" id="first-name" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Ongkos Kerja <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="ongkos_kerja" value="<?php echo $a->ongkos_kerja ?>" id="txt1" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Uang Makan<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="uang_makan" value="<?php echo $a->uang_makan ?>" id="txt2" onkeyup="sum();" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Upah Lembur<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="upah_lembur" value="<?php echo $a->upah_lembur ?>" id="txt3" onkeyup="sum();" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Asuransi Kesehatan<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="asuransi_kesehatan" value="<?php echo $a->asuransi_kesehatan ?>" id="txt4" onkeyup="sum();" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Uang Transport<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="uang_transport" value="<?php echo $a->uang_transport ?>" id="txt5" onkeyup="sum();" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Tunjangan Jabatan<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="tunjangan_jabatan" value="<?php echo $a->tunjangan_jabatan ?>" id="txt6" onkeyup="sum();" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bonus<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" name="bonus" value="<?php echo $a->bonus ?>" id="txt7" onkeyup="sum();" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Total Gaji <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="total_gaji" id="txt3" value="<?php echo $a->total_gaji ?>" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                          <input type="text" name="total_gaji" id="txt8" value="<?php echo $a->total_gaji ?>" onkeyup="sum();" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
 
@@ -178,12 +233,14 @@
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
                         <a href="<?php echo base_url()."index.php/Welcome/gajikaryawan"; ?>">
-                        <button class="btn btn-primary" type="button">Batal</button></a>
+                        <button class="btn btn-secondary" type="button">Batal</button></a>
                         <input type="submit" name="submit" class="btn btn-success required"></input>
+                        </form>
+                        
                         </div>
                       </div>
 
-                      </form>
+                      
                   </div>
                 </div>
               </div>
@@ -246,9 +303,14 @@
         function sum() {
         var txtFirstNumberValue = document.getElementById('txt1').value;
         var txtSecondNumberValue = document.getElementById('txt2').value;
-        var result = parseFloat(txtFirstNumberValue) - parseFloat(txtSecondNumberValue);
+        var txtTigaNumberValue = document.getElementById('txt3').value;
+        var txtEmpatNumberValue = document.getElementById('txt4').value;
+        var txtLimaNumberValue = document.getElementById('txt5').value;
+        var txtEnamNumberValue = document.getElementById('txt6').value;
+        var txtTujuhNumberValue = document.getElementById('txt7').value;
+        var result = parseFloat(txtFirstNumberValue) + parseFloat(txtSecondNumberValue) + parseFloat(txtTigaNumberValue) + parseFloat(txtEmpatNumberValue) + parseFloat(txtLimaNumberValue)+ parseFloat(txtEnamNumberValue) + parseFloat(txtTujuhNumberValue);
         if (!isNaN(result)) {
-          document.getElementById('txt3').value = result;
+          document.getElementById('txt8').value = result;
       }
     }
     </script>

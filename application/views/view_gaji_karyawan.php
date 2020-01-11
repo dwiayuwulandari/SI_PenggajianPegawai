@@ -56,17 +56,16 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <ul class="nav side-menu">
-                    <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-                    <li><a href="<?php echo base_url()."index.php/Welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                      <li><a href="<?php echo base_url()."index.php/Welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
-                       <li><a href="<?php echo base_url()."index.php/Welcome/Transfer_Gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
-                      <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
-                      <ul class="nav child_menu">
-                        <li><a href="<?php echo base_url()."index.php/Welcome/Cetak_slip"; ?>">Cetak Slip</a></li>
-                          <li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan</a></li>
-                      </ul>
-                      </li>
+              <ul class="nav side-menu">
+    	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+                  	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
+                    	<ul class="nav child_menu">
+                     	 	<li><a>Laporan Mingguan</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan Harian</a></li>
+                    	</ul>
+                  	  </li>
                 </ul>
               </div>             
             </div>
@@ -135,6 +134,9 @@
               </div>
             </div>
 
+            <?php   
+                        
+            foreach ($proyek as $a): ?>
             <div class="clearfix"></div>
 
             <div class="row">
@@ -149,33 +151,39 @@
                       <div class="row">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
+                            <h1> Nama Proyek : <?php echo $a->nama_proyek ?></h1>
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
+                          <th>Nama</th>
                           <th>Bagian</th>
-                          <th>Gaji Pokok</th>
-                          <th>Potongan Askes</th>
+                          <th>Bulan</th>
+                          <th>Tanggal Terima</th>
                           <th>Total Gaji</th>
-                          <th>Aksi</th>             
+                          <th>Aksi</th>         
                         </tr>
                       </thead>
 
 
                       <tbody>
-                      <?php foreach($gaji as $a): ?>
+
+                      <?php
+                      $coba = $this->db->query("SELECT * FROM gaji_karyawan JOIN tambah_proyek ON gaji_karyawan.id_proyek=tambah_proyek.id_proyek WHERE gaji_karyawan.id_proyek='$a->id_proyek'")->result(); 
+                      foreach($coba as $i): ?>
                       <tr>
                       
                         
-                        
-                       <td><?php echo $a-> bagian_karyawan ?></td>
-                        <td>Rp. <?php echo $a-> gaji_karyawan ?></td>
-                        <td>Rp. <?php echo $a-> potongan_askes ?></td>
-                        <td>Rp. <?php echo $a-> total_gaji?></td>
+                        <td><?php echo $i-> nama_karyawan ?></td>
+                        <td><?php echo $i-> bagian_karyawan ?></td>
+                        <td><?php echo $i-> bulan_terima ?></td>
+                        <td><?php echo $i-> tanggal_terima ?></td>
+                        <td><?php echo $i-> total_gaji ?></td>
 
                         <td>
-                          <a href="<?php echo base_url('index.php/Welcome/edit_gaji/'.$a->id_bagian) ?>"><button class="btn btn-success" type="button">Edit</button></a>
-                          <a href="<?php echo base_url('index.php/Welcome/hapus_gaji/'.$a->id_bagian) ?>"><button type="submit" class="btn btn-danger">Hapus</button></a>
+                        <a href="<?php echo base_url('index.php/Welcome/detail_gaji/'.$i->id_gaji) ?>"><button class="btn btn-success" type="button">Detail</button></a>
+                          
                         </td>
+
                     
                       </tr>
                       <?php 
@@ -185,15 +193,19 @@
                          <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-18">
-                          <a href="<?php echo base_url()."index.php/Welcome/Tambah_Data_Gaji_Karyawan"; ?>">
-                          <button type="submit" class="btn btn-success">Tambah Data Gaji Karyawan</button></a>
+                          <a href="<?php echo base_url('index.php/Welcome/Tambah_Data_Gaji_Karyawan/'.$a->id_proyek); ?>">
+                          <button type="submit" class="btn btn-success"> <i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Gaji Karyawan</button></a>
                         </div>
                       </div>
                   </div>
                   </div>
               </div>
             </div>
+            
                 </div>
+                <?php 
+                        
+                      endforeach;?>
               </div>
 
             </div>

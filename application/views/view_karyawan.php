@@ -56,17 +56,16 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <ul class="nav side-menu">
-                    <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-                    <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                      <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
-                       <li><a href="<?php echo base_url()."index.php/welcome/Transfer_Gaji"; ?>"><i class="fa fa-exchange"></i> Transfer Gaji </a></li>
-                      <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
-                      <ul class="nav child_menu">
-                        <li><a href="<?php echo base_url()."index.php/Welcome/Cetak_slip"; ?>">Cetak Slip</a></li>
-                          <li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan</a></li>
-                      </ul>
-                      </li>
+              <ul class="nav side-menu">
+    	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+                  	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
+                    	<ul class="nav child_menu">
+                     	 	<li><a>Laporan Mingguan</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan Harian</a></li>
+                    	</ul>
+                  	  </li>
                 </ul>
               </div>             
             </div>
@@ -128,6 +127,37 @@
               </div>
 
               <div class="title_right">
+              <ul class="nav navbar-right panel_toolbox">
+     
+              <button type="button" class="btn btn-success btn-round btn-lg" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <i class="fa fa-plus" aria-hidden="true"></i> Tambah Proyek</button>
+            
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                       <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel">Tambah Proyek</h5>
+              <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+            <form action="<?php echo base_url('index.php/Welcome/fungsitambahproyek/') ?>" method="post" >
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Nama Proyek :</label>
+                  <input type="text" name="nama_proyek" class="form-control" id="recipient-name">
+                </div>
+           
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <input type="submit" name="submit" class="btn btn-success"></input>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+              </ul>
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
                    
@@ -135,11 +165,14 @@
                 </div>
               </div>
             </div>
-
+            <?php   
+                        
+            foreach ($proyek as $a): ?>
             <div class="clearfix"></div>
 
             <div class="row">
               <div class="col-md-12 col-sm-12 ">
+
                 <div class="x_panel">
                   <div class="x_title">
                     <ul class="nav navbar-right panel_toolbox">
@@ -150,38 +183,44 @@
                       <div class="row">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
+                                <h1> Nama Proyek : <?php echo $a->nama_proyek ?></h1>
+                                
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
 
                           <th>Nama </th>
                           <th>Bagian</th>
-                          <th>Tempat Tanggal Lahir</th>
                           <th>Jenis Kelamin</th>
+                          <th>Alamat</th>
                           <th>No Rekening </th>
+                          <th>Nomer Hp</th>           
                           <th>Aksi</th>
+
                         </tr>
                       </thead>
 
                       <tbody>
                         <?php   
-                        
-                            foreach ($karyawan as $i): ?>
+                        $coba = $this->db->query("SELECT * FROM data_karyawan JOIN tambah_proyek ON data_karyawan.id_proyek=tambah_proyek.id_proyek WHERE data_karyawan.id_proyek='$a->id_proyek'")->result();
+                            foreach ($coba as $i): ?>
                       <tr>
         
                        
                         <td><?php echo $i->nama_karyawan ?></td>
                         <td><?php echo $i->bagian_karyawan ?></td>
-                        <td><?php echo $i->ttl_karyawan ?></td>
                         <td><?php echo $i->jenis_kelamin ?></td>
+                        <td><?php echo $i->alamat_karyawan ?></td>
                         <td><?php echo $i->no_rekening ?></td>
+                        <td><?php echo $i->nomer_hp ?></td>
+      
                         
                         
                         <td> 
-                          <a href="<?php echo base_url('index.php/Welcome/edit_karyawan/'.$i->id_karyawan) ?>"><button class="btn btn-success" type="button">Edit</button></a>
-                          <a href="<?php echo base_url('index.php/Welcome/hapus_karyawan/'.$i->id_karyawan) ?>"><button type="submit" class="btn btn-danger">Hapus</button></a>
+                          <a href="<?php echo base_url('index.php/Welcome/detail_karyawan/'.$i->id_karyawan) ?>"><button class="btn btn-success" type="button">Detail</button></a>
                         </td>
-                        
+     
+
                       </tr>
                         <?php 
                         
@@ -191,8 +230,9 @@
                             <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-18">
-                          <a href="<?php echo base_url()."index.php/Welcome/Tambah_Data_Karyawan"; ?>">
-                          <button type="submit" class="btn btn-success" >Tambah Data Karyawan</button></a>
+                       
+                          <a class="btn btn-success" href="<?php echo base_url('index.php/Welcome/Tambah_Data_Karyawan/'.$a->id_proyek); ?>"> <i class="fa fa-plus" aria-hidden="true"></i>
+                          Tambah Data Karyawan</a>
                         </div>
                       </div>
                     </div>
@@ -200,6 +240,9 @@
                   </div>
               </div>
             </div>
+            <?php 
+                        
+                     endforeach;?>
                 </div>
               </div>
 

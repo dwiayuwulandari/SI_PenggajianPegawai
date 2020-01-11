@@ -125,10 +125,9 @@
               <div class="title_left">
                 <h3>Daftar Proyek</h3>
               </div>
-              
+
               <div class="title_right">
               <ul class="nav navbar-right panel_toolbox">
-     
               <button type="button" class="btn btn-success btn-round btn-lg" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
                 <i class="fa fa-plus" aria-hidden="true"></i> Tambah Proyek</button>
             
@@ -158,8 +157,6 @@
   </div>
 </div>
               </ul>
-
-              <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
                    
@@ -222,7 +219,33 @@
                             <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
                           </td>
                         </tr>
-                        
+                        <tr>
+                          <td>4.</td>
+                          <td>Pembangunan Gedung A3 Di Politeknik Negeri Jember</td>
+                          <td>Lingkungan Panji, Tegalgede, Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124</td>
+
+                          <td> 
+                            <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5.</td>
+                          <td>Pembangunan Jalan Dan Jembatan Wonosari</td>
+                          <td>Jl. KHR As'ad Syamsul Arifin No.2, Blk. Gardu, Cindogo, Tapen, Kabupaten Bondowoso, Jawa Timur 68283</td>
+
+                          <td> 
+                            <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
+                          </td>
+                        </tr>
+                        <tr>
+                           <td>6.</td>
+                          <td>Pembangunan Jalan Kembang</td>
+                          <td>Sekolahan, Kembang, Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68219</td>
+
+                          <td> 
+                            <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
+                          </td>
+                        </tr>
 
                 
                       </tbody>

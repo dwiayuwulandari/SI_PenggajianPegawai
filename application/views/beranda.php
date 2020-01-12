@@ -146,6 +146,10 @@
                   <label for="recipient-name" class="col-form-label">Nama Proyek :</label>
                   <input type="text" name="nama_proyek" class="form-control" id="recipient-name">
                 </div>
+                <div class="form-group">
+            <label for="message-text" class="col-form-label">Alamat :</label>
+            <input type ="text" class="form-control"  name="alamat_proyek" id="message-text">
+          </div>
            
       </div>
       <div class="modal-footer">
@@ -182,72 +186,28 @@
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>No</th>
+                          <th>No </th>
                           <th>Nama Proyek</th>
-                          <th>Alamat</th>
-                          <th>Aksi</th>
-
+                          <th>Alamat Proyek</th>
+                          <th>aksi</th>
+                          
                         </tr>
                       </thead>
 
-
                       <tbody>
+                      <?php  
+                         $no=1; 
+                        foreach ($tes as $a): ?>
                         <tr>
-                          <td>1.</td>
-                          <td>Pembangunan Gedung A3 Di Politeknik Negeri Jember</td>
-                          <td>Lingkungan Panji, Tegalgede, Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124</td>
-
+                          <td><?php echo $no++; ?></td>
+                          <td><?php echo $a->nama_proyek ?></td>
+                          <td><?php echo $a->alamat_proyek ?></td>
                           <td> 
                             <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
                           </td>
                         </tr>
-                        <tr>
-                          <td>2.</td>
-                          <td>Pembangunan Jalan Dan Jembatan Wonosari</td>
-                          <td>Jl. KHR As'ad Syamsul Arifin No.2, Blk. Gardu, Cindogo, Tapen, Kabupaten Bondowoso, Jawa Timur 68283</td>
-
-                          <td> 
-                            <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
-                          </td>
-                        </tr>
-                        <tr>
-                           <td>3.</td>
-                          <td>Pembangunan Jalan Kembang</td>
-                          <td>Sekolahan, Kembang, Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68219</td>
-
-                          <td> 
-                            <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>4.</td>
-                          <td>Pembangunan Gedung A3 Di Politeknik Negeri Jember</td>
-                          <td>Lingkungan Panji, Tegalgede, Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124</td>
-
-                          <td> 
-                            <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>5.</td>
-                          <td>Pembangunan Jalan Dan Jembatan Wonosari</td>
-                          <td>Jl. KHR As'ad Syamsul Arifin No.2, Blk. Gardu, Cindogo, Tapen, Kabupaten Bondowoso, Jawa Timur 68283</td>
-
-                          <td> 
-                            <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
-                          </td>
-                        </tr>
-                        <tr>
-                           <td>6.</td>
-                          <td>Pembangunan Jalan Kembang</td>
-                          <td>Sekolahan, Kembang, Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68219</td>
-
-                          <td> 
-                            <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
-                          </td>
-                        </tr>
-
-                
+                      <?php     
+                        endforeach;?>
                       </tbody>
                     </table>
                   </div>

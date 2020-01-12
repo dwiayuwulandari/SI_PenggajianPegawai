@@ -155,6 +155,7 @@
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
+                          <th>No</th>
                           <th>Nama</th>
                           <th>Bagian</th>
                           <th>Bulan</th>
@@ -168,11 +169,12 @@
                       <tbody>
 
                       <?php
+                       $no=1;
                       $coba = $this->db->query("SELECT * FROM gaji_karyawan JOIN tambah_proyek ON gaji_karyawan.id_proyek=tambah_proyek.id_proyek WHERE gaji_karyawan.id_proyek='$a->id_proyek'")->result(); 
                       foreach($coba as $i): ?>
                       <tr>
                       
-                        
+                        <td><?php echo $no++; ?></td>
                         <td><?php echo $i-> nama_karyawan ?></td>
                         <td><?php echo $i-> bagian_karyawan ?></td>
                         <td><?php echo $i-> bulan_terima ?></td>

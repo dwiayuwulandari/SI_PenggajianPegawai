@@ -33,15 +33,6 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('beranda');
 	}
-	public function fungsitambahproyek(){
-		$data = 
-		[
-			'nama_proyek' => $this->input->post('nama_proyek'),
-		];
-
-		$this->M_proyek->proyek($data);
-		redirect('karyawan/datakaryawan');
-	}
 	public function laporan()
 	{
 		$this->load->view('laporan');

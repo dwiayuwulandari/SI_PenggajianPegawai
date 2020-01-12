@@ -27,6 +27,10 @@ class M_bagian extends CI_Model {
     {
         return $this->db->get_where($this->_table, ["id_gaji" => $id_gaji])->row();
     }
+    public function gaji($data)
+    {
+		$this->db->insert('gaji_karyawan', $data);
+    }
     public function updategaji($id_gaji)
     {
         $post = $this->input->post();

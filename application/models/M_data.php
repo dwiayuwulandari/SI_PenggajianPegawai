@@ -27,6 +27,10 @@ class M_data extends CI_Model {
     {
         return $this->db->get_where($this->_table, ["id_karyawan" => $id_karyawan])->row();
     }
+    public function karyawan($data)
+    {
+		$this->db->insert('data_karyawan', $data);
+    }
     public function updatekaryawan($id_karyawan)
     {
         $post = $this->input->post();

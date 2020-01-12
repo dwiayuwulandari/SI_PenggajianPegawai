@@ -11,7 +11,6 @@ class karyawan extends CI_Controller {
 		$this->load->model('M_bagian');
 		$this->load->model('M_proyek');
 		$this->load->model('Crud_karyawan');
-		$this->load->model('Crud_bagian');
 		$this->load->helper(array('url'));
     }
 	
@@ -70,7 +69,7 @@ class karyawan extends CI_Controller {
 			'foto_ktp' => $this->input->post('foto_ktp')
 		];
 
-		$this->Crud_bagian->karyawan($data);
+		$this->M_data->karyawan($data);
 		redirect('karyawan/datakaryawan');
 	}
 	public function Detail_Data_Karyawan()

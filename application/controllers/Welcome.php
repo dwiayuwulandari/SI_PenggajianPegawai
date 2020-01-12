@@ -11,7 +11,6 @@ class Welcome extends CI_Controller {
 		$this->load->model('M_bagian');
 		$this->load->model('M_proyek');
 		$this->load->model('Crud_karyawan');
-		$this->load->model('Crud_bagian');
 		$this->load->helper(array('url'));
     }
 	

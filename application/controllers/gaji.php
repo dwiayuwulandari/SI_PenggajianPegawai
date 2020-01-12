@@ -11,7 +11,6 @@ class gaji extends CI_Controller {
 		$this->load->model('M_bagian');
 		$this->load->model('M_proyek');
 		$this->load->model('Crud_karyawan');
-		$this->load->model('Crud_bagian');
 		$this->load->helper(array('url'));
     }
 	
@@ -30,7 +29,6 @@ class gaji extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-
 
 	public function gaji_karyawan()
 	{
@@ -63,7 +61,7 @@ class gaji extends CI_Controller {
 			
 		];
 
-		$this->Crud_bagian->bagian($data);
+		$this->M_bagian->gaji($data);
 		redirect('gaji/gajikaryawan');
     }
     public function Detail_Gaji_Karyawan()

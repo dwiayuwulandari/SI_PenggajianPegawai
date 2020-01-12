@@ -12,9 +12,9 @@ class M_proyek extends CI_Model {
     {
         return $this->db->get($this->_table)->result();
     }
-    public function getById($id_karyawan)
+    public function getById($id_proyek)
     {
-        return $this->db->get_where($this->_table, ["id_karyawan" => $id_karyawan])->row();
+        return $this->db->get_where($this->_table, ["id_proyek" => $id_proyek])->row();
     }
     public function proyek($data)
     {

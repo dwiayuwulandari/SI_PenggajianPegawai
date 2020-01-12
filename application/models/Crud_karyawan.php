@@ -52,3 +52,4 @@ class Crud_karyawan extends CI_Model {
 
 }
 
+

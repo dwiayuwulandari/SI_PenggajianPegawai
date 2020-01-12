@@ -58,8 +58,8 @@
               <div class="menu_section">
               <ul class="nav side-menu">
     	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-	                  <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                  	  <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/karyawan/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/gaji/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">
                      	 	<li><a>Laporan Mingguan</a></li>
@@ -180,7 +180,7 @@
                         <td><?php echo $i-> total_gaji ?></td>
 
                         <td>
-                        <a href="<?php echo base_url('index.php/Welcome/detail_gaji/'.$i->id_gaji) ?>"><button class="btn btn-success" type="button">Detail</button></a>
+                        <a href="<?php echo base_url('index.php/gaji/detail_gaji/'.$i->id_gaji) ?>"><button class="btn btn-success" type="button">Detail</button></a>
                           
                         </td>
 
@@ -193,7 +193,7 @@
                          <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-18">
-                          <a href="<?php echo base_url('index.php/Welcome/Tambah_Data_Gaji_Karyawan/'.$a->id_proyek); ?>">
+                          <a href="<?php echo base_url('index.php/gaji/Tambah_Data_Gaji_Karyawan/'.$a->id_proyek); ?>">
                           <button type="submit" class="btn btn-success"> <i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Gaji Karyawan</button></a>
                         </div>
                       </div>

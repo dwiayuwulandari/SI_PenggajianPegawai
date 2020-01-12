@@ -60,8 +60,8 @@
               <div class="menu_section">
               <ul class="nav side-menu">
     	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-	                  <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                  	  <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/karyawan/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/gaji/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">
                      	 	<li><a>Laporan Mingguan</a></li>
@@ -137,9 +137,9 @@
                   <div class="x_title">
                     <h2>Detail Data Karyawan </h2>
                     <ul class="nav navbar-right panel_toolbox">
-                      <a href="<?php echo base_url('index.php/Welcome/edit_karyawan/'.$detail_karyawan['id_karyawan']); ?>"><button class="btn btn-round btn-primary" type="button">
+                      <a href="<?php echo base_url('index.php/karyawan/edit_karyawan/'.$detail_karyawan['id_karyawan']); ?>"><button class="btn btn-round btn-primary" type="button">
                       <i class="fa fa-pencil" aria-hidden="true"></i> Edit</button></a>
-                      <a href="<?php echo base_url('index.php/Welcome/hapus_karyawan/'.$detail_karyawan['id_karyawan']); ?>"><button type="submit" class="btn btn-round btn-danger">
+                      <a href="<?php echo base_url('index.php/karyawan/hapus_karyawan/'.$detail_karyawan['id_karyawan']); ?>"><button type="submit" class="btn btn-round btn-danger">
                       <i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button></a>
                     </ul>
                     <div class="clearfix"></div>

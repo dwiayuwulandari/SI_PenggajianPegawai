@@ -60,8 +60,8 @@
               <div class="menu_section">
               <ul class="nav side-menu">
     	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-	                  <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                  	  <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/karyawan/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/gaji/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">
                      	 	<li><a>Laporan Mingguan</a></li>
@@ -143,7 +143,7 @@
                   <div class="x_content">
                     <br />
                     
-                    <form action="<?php echo base_url('index.php/Welcome/edit_karyawan/'.$i->id_karyawan) ?>" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <form action="<?php echo base_url('index.php/karyawan/edit_karyawan/'.$i->id_karyawan) ?>" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" name="nama_karyawan" for="first-name">Nama Lengkap <span class="required">*</span>
@@ -211,7 +211,7 @@
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                        <a href="<?php echo base_url()."index.php/Welcome/datakaryawan"; ?>">
+                        <a href="<?php echo base_url()."index.php/karyawan/datakaryawan"; ?>">
                         <button class="btn btn-secondary" type="button">Batal</button></a>
                           <input type="submit" name="submit" class="btn btn-success required"></input>
                         </div>

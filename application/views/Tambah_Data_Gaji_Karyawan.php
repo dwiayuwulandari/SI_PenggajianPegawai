@@ -60,8 +60,8 @@
               <div class="menu_section">
               <ul class="nav side-menu">
     	              <li><a href="<?php echo base_url()."index.php/Welcome"; ?>"><i class="fa fa-home"></i> Dashboard </a></li>
-	                  <li><a href="<?php echo base_url()."index.php/welcome/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
-                  	  <li><a href="<?php echo base_url()."index.php/welcome/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
+	                  <li><a href="<?php echo base_url()."index.php/karyawan/datakaryawan"; ?>"><i class="fa fa-user"></i> Data Karyawan </a></li>
+                  	  <li><a href="<?php echo base_url()."index.php/gaji/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">
                      	 	<li><a>Laporan Mingguan</a></li>
@@ -141,7 +141,7 @@
                   </div>
                   <div class="x_content">
                     <br />
-                    <?= form_open_multipart('Welcome/fungsitambahgaji'); ?>
+                    <?= form_open_multipart('gaji/fungsitambahgaji'); ?>
 
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nama<span class="required">*</span>
@@ -232,7 +232,7 @@
                       <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-3">
-                        <a href="<?php echo base_url()."index.php/Welcome/gajikaryawan"; ?>">
+                        <a href="<?php echo base_url()."index.php/gaji/gajikaryawan"; ?>">
                         <button class="btn btn-secondary" type="button">Batal</button></a>
                           <button type="submit" class="btn btn-success">Submit</button>
                         </div>

@@ -45,7 +45,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Admin</h2>
+                <h2>Imam Basori</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -197,7 +197,7 @@
                       <tbody>
                       <?php  
                          $no=1; 
-                        foreach ($tes as $a): ?>
+                        foreach ($proyek as $a): ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
                           <td><?php echo $a->nama_proyek ?></td>

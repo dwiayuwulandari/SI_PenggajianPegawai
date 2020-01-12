@@ -7,10 +7,8 @@ class gaji extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-		$this->load->model('M_data');
 		$this->load->model('M_bagian');
 		$this->load->model('M_proyek');
-		$this->load->model('Crud_karyawan');
 		$this->load->helper(array('url'));
     }
 	

@@ -141,7 +141,7 @@
               </button>
                 </div>
                 <div class="modal-body">
-            <form action="<?php echo base_url('index.php/Welcome/fungsitambahproyek/') ?>" method="post" >
+            <form action="<?php echo base_url('index.php/proyek/fungsitambahproyek/') ?>" method="post" >
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label">Nama Proyek :</label>
                   <input type="text" name="nama_proyek" class="form-control" id="recipient-name">

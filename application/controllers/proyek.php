@@ -27,10 +27,17 @@ class proyek extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
+	public function dataproyek()
+	{
+		$data['proyek']=$this->M_proyek->getAll();
+		// $data['karyawan']=$this->M_data->getAll();
+		$this->load->view('beranda',$data);
+	}
 	public function fungsitambahproyek(){
 		$data = 
 		[
 			'nama_proyek' => $this->input->post('nama_proyek'),
+			'alamat_proyek' => $this->input->post('alamat_proyek')
 		];
 
 		$this->M_proyek->proyek($data);

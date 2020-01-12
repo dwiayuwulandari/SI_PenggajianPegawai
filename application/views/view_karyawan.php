@@ -159,7 +159,7 @@
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-
+                          <th>No </th>
                           <th>Nama </th>
                           <th>Bagian</th>
                           <th>Jenis Kelamin</th>
@@ -173,19 +173,18 @@
 
                       <tbody>
                         <?php   
+                         $no=1;
                         $coba = $this->db->query("SELECT * FROM data_karyawan JOIN tambah_proyek ON data_karyawan.id_proyek=tambah_proyek.id_proyek WHERE data_karyawan.id_proyek='$a->id_proyek'")->result();
                             foreach ($coba as $i): ?>
                       <tr>
         
-                       
+                        <td><?php echo $no++; ?></td>
                         <td><?php echo $i->nama_karyawan ?></td>
                         <td><?php echo $i->bagian_karyawan ?></td>
                         <td><?php echo $i->jenis_kelamin ?></td>
                         <td><?php echo $i->alamat_karyawan ?></td>
                         <td><?php echo $i->no_rekening ?></td>
                         <td><?php echo $i->nomer_hp ?></td>
-      
-                        
                         
                         <td> 
                           <a href="<?php echo base_url('index.php/karyawan/detail_karyawan/'.$i->id_karyawan) ?>"><button class="btn btn-success" type="button">Detail</button></a>

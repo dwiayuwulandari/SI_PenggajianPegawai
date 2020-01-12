@@ -12,11 +12,6 @@ class Crud_bagian extends CI_Model {
     {
 		$this->db->insert('data_karyawan', $data);
   }
-
-  public function proyek($data)
-    {
-		$this->db->insert('tambah_proyek', $data);
-  }
   
 }
 

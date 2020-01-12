@@ -30,10 +30,7 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('beranda');
-	}
+
 	public function fungsitambahproyek(){
 		$data = 
 		[
@@ -42,17 +39,6 @@ class Welcome extends CI_Controller {
 
 		$this->M_proyek->proyek($data);
 		redirect('karyawan/datakaryawan');
-	}
-	public function laporan()
-	{
-		$this->load->view('laporan');
-	}
-	function logout()
-	{
-		$this->session->unset_userdata('username');
-
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda telah keluar</div>');
-		redirect('login');
 	}
 
 }

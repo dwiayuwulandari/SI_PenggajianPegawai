@@ -64,8 +64,8 @@
                   	  <li><a href="<?php echo base_url()."index.php/gaji/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">
-                     	 	<li><a>Laporan Mingguan</a></li>
-                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan Harian</a></li>
+                      <li><a href="<?php echo base_url()."index.php/laporan/laporan_mingguan"; ?>">Laporan Mingguan</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/laporan/laporan_bulanan"; ?>">Laporan Bulanan</a></li>
                     	</ul>
                   	  </li>
                 </ul>
@@ -157,7 +157,7 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" name="bagian_karyawan" for="last-name">Bagian <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" id="last-name" name="bagian_karyawan" value="<?php echo $i->bagian_karyawan ?>"required="required" class="form-control">
+                          <input type="text" readonly="readonly" id="last-name" name="bagian_karyawan" value="<?php echo $i->bagian_karyawan ?>"required="required" class="form-control">
                         </div>
                       </div>
                       <div class="item form-group">

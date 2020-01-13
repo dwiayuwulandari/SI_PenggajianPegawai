@@ -48,17 +48,17 @@ class login extends CI_Controller {
 					redirect('beranda');
 				} else {
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf password yang anda masukkan salah!</div>');
-					redirect('login_admin');
+					redirect('Welcome');
 				}
 			} else {
 
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf username yang anda masukkan tidak aktif!</div>');
-				redirect('login_admin');
+				redirect('Welcome');
 			}
 		} else {
 
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf username yang anda masukkan salah!</div>');
-			redirect('login_admin');
+			redirect('Welcome');
 		}
 	}
 

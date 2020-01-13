@@ -61,8 +61,8 @@
                   	  <li><a href="<?php echo base_url()."index.php/gaji/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">
-                     	 	<li><a>Laporan Mingguan</a></li>
-                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan Harian</a></li>
+                     	 	<li><a href="<?php echo base_url()."index.php/laporan/laporan_mingguan"; ?>">Laporan Mingguan</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/laporan/laporan_bulanan"; ?>">Laporan Bulanan</a></li>
                     	</ul>
                   	  </li>
                 </ul>
@@ -200,8 +200,8 @@
                         foreach ($proyek as $a): ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
-                          <td><?php echo $a->nama_proyek ?></td>
-                          <td><?php echo $a->alamat_proyek ?></td>
+                          <td><?php echo $a-> nama_proyek ?></td>
+                          <td><?php echo $a-> alamat_proyek ?></td>
                           <td> 
                             <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
                           </td>

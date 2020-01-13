@@ -46,7 +46,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Imam Basori</h2>
+                <h2>Admin</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -69,7 +69,6 @@
                 </ul>
               </div>             
             </div>
-
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
@@ -109,7 +108,7 @@
                     </div>
                   </li>
   
-              
+                
                     </ul>
                   </li>
                 </ul>
@@ -123,12 +122,10 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Data Karyawan </h3>
+                <h3> Laporan Mingguan </h3>
               </div>
 
               <div class="title_right">
-              <ul class="nav navbar-right panel_toolbox">
-              </ul>
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
                    
@@ -136,14 +133,11 @@
                 </div>
               </div>
             </div>
-            <?php   
-                        
-            foreach ($proyek as $a): ?>
+
             <div class="clearfix"></div>
 
             <div class="row">
               <div class="col-md-12 col-sm-12 ">
-
                 <div class="x_panel">
                   <div class="x_title">
                     <ul class="nav navbar-right panel_toolbox">
@@ -154,41 +148,32 @@
                       <div class="row">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
-                                <h1> Nama Proyek : <?php echo $a->nama_proyek ?></h1>
-                                
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>No </th>
-                          <th>Nama </th>
-                          <th>Bagian</th>
-                          <th>Jenis Kelamin</th>
-                          <th>Alamat</th>
-                          <th>No Rekening </th>
-                          <th>Nomer Hp</th>           
-                          <th>Aksi</th>
-
+                          <th>No</th>
+                          <th>Nama Proyek</th>
+                          <th>Bulan</th>
+                          <th>Minggu Ke</th>
+                          <th>Tanggal</th>
+                          <th>Total Pengeluaran</th>
                         </tr>
                       </thead>
+
 
                       <tbody>
                         <?php   
                          $no=1;
-                        $coba = $this->db->query("SELECT * FROM data_karyawan JOIN tambah_proyek ON data_karyawan.id_proyek=tambah_proyek.id_proyek WHERE data_karyawan.id_proyek='$a->id_proyek'")->result();
-                            foreach ($coba as $i): ?>
+                            foreach ($lapming as $i): ?>
                       <tr>
         
                         <td><?php echo $no++; ?></td>
-                        <td><?php echo $i->nama_karyawan ?></td>
-                        <td><?php echo $i->bagian_karyawan ?></td>
-                        <td><?php echo $i->jenis_kelamin ?></td>
-                        <td><?php echo $i->alamat_karyawan ?></td>
-                        <td><?php echo $i->no_rekening ?></td>
-                        <td><?php echo $i->nomer_hp ?></td>
+                        <td><?php echo $i->nama_proyek ?></td>
+                        <td><?php echo $i->bulan_terima ?></td>
+                        <td><?php echo $i->minggu ?></td>
+                        <td><?php echo $i->tanggal_terima ?></td>
+                        <td>Rp. <?php echo number_format ($i-> total, 0, ',', '.'); ?></td>
                         
-                        <td> 
-                          <a href="<?php echo base_url('index.php/karyawan/detail_karyawan/'.$i->id_karyawan) ?>"><button class="btn btn-success" type="button">Detail</button></a>
-                        </td>
      
 
                       </tr>
@@ -197,22 +182,10 @@
                      endforeach;?>
                      </tbody>
                     </table>
-                            <div class="ln_solid"></div>
-                      <div class="item form-group">
-                        <div class="col-md-6 col-sm-6 offset-md-18">
-                       
-                          <a class="btn btn-success" href="<?php echo base_url('index.php/karyawan/Tambah_Data_Karyawan/'.$a->id_proyek); ?>"> <i class="fa fa-plus" aria-hidden="true"></i>
-                          Tambah Data Karyawan</a>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   </div>
               </div>
             </div>
-            <?php 
-                        
-                     endforeach;?>
                 </div>
               </div>
 
@@ -264,5 +237,3 @@
 
   </body>
 </html>
-            
-   

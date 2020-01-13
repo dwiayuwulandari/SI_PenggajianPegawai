@@ -62,8 +62,8 @@
                   	  <li><a href="<?php echo base_url()."index.php/gaji/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">
-                     	 	<li><a>Laporan Mingguan</a></li>
-                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan Harian</a></li>
+                      <li><a href="<?php echo base_url()."index.php/laporan/laporan_mingguan"; ?>">Laporan Mingguan</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/laporan/laporan_bulanan"; ?>">Laporan Bulanan</a></li>
                     	</ul>
                   	  </li>
                 </ul>
@@ -159,6 +159,7 @@
                           <th>Nama</th>
                           <th>Bagian</th>
                           <th>Bulan</th>
+                          <th>Minggu Ke</th>
                           <th>Tanggal Terima</th>
                           <th>Total Gaji</th>
                           <th>Aksi</th>         
@@ -178,8 +179,9 @@
                         <td><?php echo $i-> nama_karyawan ?></td>
                         <td><?php echo $i-> bagian_karyawan ?></td>
                         <td><?php echo $i-> bulan_terima ?></td>
+                        <td><?php echo $i-> minggu_ke ?></td>
                         <td><?php echo $i-> tanggal_terima ?></td>
-                        <td><?php echo $i-> total_gaji ?></td>
+                        <td>Rp. <?php echo number_format ($i-> total_gaji, 0, ',', '.'); ?></td>
 
                         <td>
                         <a href="<?php echo base_url('index.php/gaji/detail_gaji/'.$i->id_gaji) ?>"><button class="btn btn-success" type="button">Detail</button></a>

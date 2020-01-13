@@ -47,6 +47,7 @@ class gaji extends CI_Controller {
 			'nama_karyawan' => $this->input->post('nama_karyawan'),
 			'bagian_karyawan' => $this->input->post('bagian_karyawan'),
 			'bulan_terima' => $this->input->post('bulan_terima'),
+			'minggu_ke' => $this->input->post('minggu_ke'),
 			'tanggal_terima' => $this->input->post('tanggal_terima'),
 			'ongkos_kerja' => $this->input->post('ongkos_kerja'),
 			'uang_makan' => $this->input->post('uang_makan'),

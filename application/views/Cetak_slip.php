@@ -71,10 +71,17 @@
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">:</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Minggu Ke<span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji->bagian_karyawan; ?> 
+                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji->minggu_ke; ?> 
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Tanggal Terima<span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji->tanggal_terima; ?> 
                         </div>
                       </div>
                       <div class="item form-group">

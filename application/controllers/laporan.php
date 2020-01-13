@@ -1,17 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class laporan extends CI_Controller {
 
 
 	public function __construct()
     {
         parent::__construct();
-		$this->load->model('M_data');
-		$this->load->model('M_bagian');
-		$this->load->model('M_proyek');
-		$this->load->model('Crud_karyawan');
 		$this->load->helper(array('url'));
+		$this->load->model('M_laporan');
     }
 	
 	/**
@@ -29,17 +26,16 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$data['proyek']=$this->M_proyek->getAll();
-		$this->load->view('beranda', $data);
-	}
-	function logout()
-	{
-		$this->session->unset_userdata('username');
 
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda telah keluar</div>');
-		redirect('login');
+	public function laporan_mingguan()
+	{
+		$data['lapming'] = $this->M_laporan->laporan_mingguan(); 
+		$this->load->view('laporan_mingguan', $data);
+    }
+    public function laporan_bulanan()
+	{
+		$data['lapbul'] = $this->M_laporan->laporan_bulanan();
+		$this->load->view('laporan_bulanan', $data);
 	}
 
 }

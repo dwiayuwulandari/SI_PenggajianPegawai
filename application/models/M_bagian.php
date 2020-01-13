@@ -8,6 +8,7 @@ class M_bagian extends CI_Model {
     public $nama_karyawan;
     public $bagian_karyawan;
     public $bulan_terima;
+    public $minggu_ke;
     public $tanggal_terima;
     public $ongkos_kerja;
     public $uang_makan;
@@ -37,6 +38,7 @@ class M_bagian extends CI_Model {
         $this->nama_karyawan = $post["nama_karyawan"];
         $this->bagian_karyawan = $post["bagian_karyawan"];
         $this->bulan_terima = $post["bulan_terima"];
+        $this->minggu_ke = $post["minggu_ke"];
         $this->tanggal_terima = $post["tanggal_terima"];
         $this->ongkos_kerja = $post["ongkos_kerja"];
         $this->uang_makan = $post["uang_makan"];

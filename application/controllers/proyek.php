@@ -29,7 +29,7 @@ class proyek extends CI_Controller {
 
 	public function dataproyek()
 	{
-		$data['proyek']=$this->M_proyek->getAll();
+		$data['proyek']=$this->Crud_proyek->getAll();
 		// $data['karyawan']=$this->M_data->getAll();
 		$this->load->view('beranda',$data);
 	}
@@ -41,7 +41,7 @@ class proyek extends CI_Controller {
 		];
 
 		$this->M_proyek->proyek($data);
-		redirect('karyawan/datakaryawan');
+		redirect('Welcome');
 	}
 
 }

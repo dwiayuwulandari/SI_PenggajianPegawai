@@ -64,8 +64,8 @@
                   	  <li><a href="<?php echo base_url()."index.php/gaji/gajikaryawan"; ?>"><i class="fa fa-money"></i> Gaji Karyawan </a></li>
                   	  <li><a><i class="fa fa-list-ul"></i> Riwayat Gaji <span class="fa fa-chevron-down"></span></a>
                     	<ul class="nav child_menu">
-                     	 	<li><a>Laporan Mingguan</a></li>
-                      	 	<li><a href="<?php echo base_url()."index.php/Welcome/laporan"; ?>">Laporan Harian</a></li>
+                      <li><a href="<?php echo base_url()."index.php/laporan/laporan_mingguan"; ?>">Laporan Mingguan</a></li>
+                      	 	<li><a href="<?php echo base_url()."index.php/laporan/laporan_bulanan"; ?>">Laporan Bulanan</a></li>
                     	</ul>
                   	  </li>
                 </ul>
@@ -155,18 +155,25 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="bagian_karyawan" value="<?php echo $a->bagian_karyawan ?>" id="first-name" required="required" class="form-control ">
+                          <input type="text"  name="bagian_karyawan" value="<?php echo $a->bagian_karyawan ?>" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bulan<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="bulan_terima" value="<?php echo $a->bulan_terima?>" id="first-name" required="required" class="form-control ">
+                          <input type="text" readonly="readonly"  name="bulan_terima" value="<?php echo $a->bulan_terima?>" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Minggu_ke<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <input type="text" readonly="readonly" name="minggu_ke" value="<?php echo $a->minggu_ke?>" id="first-name" required="required" class="form-control ">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Tanggal Terima<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                           <input type="text" name="tanggal_terima" value="<?php echo $a->tanggal_terima ?>" id="first-name" required="required" class="form-control ">

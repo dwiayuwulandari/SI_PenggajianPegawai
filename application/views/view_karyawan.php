@@ -46,7 +46,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Imam Basori</h2>
+                <h2>Admin</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -101,7 +101,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="images/img.jpg" alt="">Imam Basori
+                      <img src="images/img.jpg" alt="">Admin
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       

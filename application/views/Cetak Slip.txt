@@ -53,7 +53,7 @@
                         <span class="required"></span><span class="required"></span><span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-12" for="first-name"><?=$detail_gaji['nama_karyawan']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji->nama_karyawan; ?> 
                         <span class="required"></span>
                         </label>
                         </div>
@@ -64,7 +64,7 @@
                           <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji['upah_lembur']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji->upah_lembur; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -73,7 +73,7 @@
                         <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-12" for="first-name"><?=$detail_gaji['bagian_karyawan']; ?> 
+                        <label class="col-form-label col-md-8" for="first-name"><?=$detail_gaji->bagian_karyawan; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -83,7 +83,7 @@
                           <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji['asuransi_kesehatan']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji->asuransi_kesehatan; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -92,7 +92,7 @@
                         <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-12" for="first-name"><?=$detail_gaji['bulan_terima']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji->bulan_terima; ?> 
                         </div>
                       </div>
 
@@ -103,7 +103,7 @@
                           <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji['uang_transport']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji->uang_transport; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -112,7 +112,7 @@
                         <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['minggu_ke']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji->minggu_ke; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -121,7 +121,7 @@
                         <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji['upah_lembur']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji->upah_lembur; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -130,7 +130,7 @@
                         <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-12" for="first-name"><?=$detail_gaji['tanggal_terima']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji->tanggal_terima; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -140,7 +140,7 @@
                           <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji['bonus']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji->bonus; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -149,7 +149,7 @@
                         <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji['ongkos_kerja']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji->ongkos_kerja; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -158,7 +158,7 @@
                         <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji['total_gaji']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji->total_gaji; ?> 
                         </div>
                       </div>
                       <div class="item form-group col-sm-6 label-center">
@@ -167,7 +167,7 @@
                         <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji['uang_makan']; ?> 
+                        <label class="col-form-label col-md-6" for="first-name">Rp. <?=$detail_gaji->uang_makan; ?> 
                         </div>
                       </div>
 

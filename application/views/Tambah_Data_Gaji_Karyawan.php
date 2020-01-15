@@ -134,7 +134,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Tambah Data Bagian </h2>
+                    <h2>Tambah Data Gaji Karyawan</h2>
                     <ul class="nav navbar-right panel_toolbox">
                     </ul>
                     <div class="clearfix"></div>
@@ -143,22 +143,15 @@
                     <br />
                     <?= form_open_multipart('gaji/fungsitambahgaji'); ?>
 
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nama<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                        <input type="hidden" name="id_proyek" id="first-name" value="<?php echo $data = $this->uri->segment(3); ?>" required="required" class="form-control ">
-                          <input type="text" name="nama_karyawan" id="first-name" required="required" class="form-control ">
-                        </div>
-                      </div>
+                      
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <select type="text" name="bagian_karyawan" id="first-name" required="required" class="form-control ">
-                            <option>Kepala Tukang</option>
-                            <option>Tukang</option>
-                            <option>Pekerja</option>
+                          <select type="text" name="id_karyawan" id="first-name" required="required" class="form-control ">
+                          <?php foreach($gaji as $r): ?>
+                             <option value="<?= $r->id_karyawan ?>"><?= $r->nama_karyawan ?> ( <?= $r->nama_proyek ?> )</option>
+                      <?php endforeach; ?>
                           </select>
                         </div>
                       </div>
@@ -254,7 +247,7 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Total Gaji <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                          <input type="text" name="total_gaji" id="txt8" onkeyup="sum();" name="last-name" required="required" class="form-control">
+                          <input type="text" readonly="readonly" name="total_gaji" id="txt8" onkeyup="sum();" name="last-name" required="required" class="form-control">
                         </div>
                       </div>
 

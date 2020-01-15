@@ -189,7 +189,8 @@
                           <th>No </th>
                           <th>Nama Proyek</th>
                           <th>Alamat Proyek</th>
-                          <th>aksi</th>
+                          <th>Aksi</th>
+                      
                           
                         </tr>
                       </thead>
@@ -200,11 +201,11 @@
                         foreach ($proyek as $a): ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
-                          <td><?php echo $a-> nama_proyek ?></td>
-                          <td><?php echo $a-> alamat_proyek ?></td>
-                          <td> 
-                            <a href=""><button class="btn btn-danger" type="button">Hapus</button></a>
-                          </td>
+                          <td><?php echo $a->nama_proyek ?></td>
+                          <td><?php echo $a->alamat_proyek ?></td>
+                          <td><a href="<?php echo base_url('index.php/Welcome/hapusAll/'.$a->id_proyek); ?>"><button type="submit" class="btn btn-round btn-danger">
+                      <i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button></a></td>
+
                         </tr>
                       <?php     
                         endforeach;?>

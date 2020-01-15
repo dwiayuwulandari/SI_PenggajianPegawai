@@ -41,5 +41,16 @@ class Welcome extends CI_Controller {
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda telah keluar</div>');
 		redirect('login');
 	}
+	public function hapusAll($id_proyek = null)
+    {
+		if($id_proyek) {
+			$this->M_data->deleteAll($id_proyek);
+			$this->session->set_flashdata('message','Data telah dihapus');
+			redirect('Welcome');
+		} else {
+			$this->session->set_flashdata('message','Record Not Found');
+			redirect('Welcome');
+		}
+	}
 
 }

@@ -17,13 +17,18 @@ class M_data extends CI_Model {
     
 
 
-    public function getAll()
+    public function getAll($id)
     {
-        return $this->db->get($this->_table)->result();
+        $this->db->select('data_karyawan.*, tambah_proyek.*');
+        $this->db->from('data_karyawan');
+        $this->db->join('tambah_proyek', 'data_karyawan.id_proyek=tambah_proyek.id_proyek');
+        $this->db->where('data_karyawan.id_proyek',$id);
+        return $this->db->get()->result();
         //$query = $this->db->query("SELECT * FROM data_karyawan JOIN tambah_proyek ON data_karyawan.id_proyek_id=tambah_proyek.id_proyek");
        //return $query->result();
     }
-    public function getById($id_karyawan)
+
+    function getById($id_karyawan)
     {
         return $this->db->get_where($this->_table, ["id_karyawan" => $id_karyawan])->row();
     }
@@ -50,5 +55,11 @@ class M_data extends CI_Model {
     {
         return $this->db->delete($this->_table, array("id_karyawan" => $id_karyawan));
     }
+
+    function deleteAll($id_proyek){
+        $query = $this->db->query("DELETE `gaji_karyawan`,data_karyawan,tambah_proyek FROM gaji_karyawan JOIN data_karyawan ON gaji_karyawan.id_karyawan=data_karyawan.id_karyawan JOIN tambah_proyek ON data_karyawan.id_proyek=tambah_proyek.id_proyek WHERE tambah_proyek.id_proyek='$id_proyek'");
+        return $query;
+    }
+
 
 }

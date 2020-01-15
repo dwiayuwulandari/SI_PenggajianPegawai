@@ -34,18 +34,35 @@ class gaji extends CI_Controller {
 	}
 	public function gajikaryawan()
 	{   $data['proyek']=$this->M_proyek->getAll();
-		//$data['gaji']=$this->M_bagian->getAll();
+		// $data['gaji']=$this->M_bagian->getAll();
 		$this->load->view('view_gaji_karyawan',$data);
 	}
 	public function Tambah_Data_Gaji_Karyawan()
 	{
-		$this->load->view('Tambah_Data_Gaji_Karyawan');	
+		$data['gaji']=$this->M_bagian->getAll2();
+		$this->load->view('Tambah_Data_Gaji_Karyawan', $data);	
+	}
+	public function load2()
+	{
+		$id = $_POST['id'];
+		$test = $this->M_bagian->getAll($id);
+		$no=1;
+		foreach($test as $i) : ?>
+			<tr>
+			<td><?php echo $no++; ?></td>
+                        <td><?php echo $i->nama_karyawan ?></td>
+                        <td><?php echo $i->bagian_karyawan ?></td>
+                        <td><?php echo $i->bulan_terima ?></td>
+                        <td><?php echo $i->minggu_ke ?></td>
+                        <td><?php echo $i->tanggal_terima ?></td>
+                        <td>Rp. <?php echo number_format ($i-> total_gaji, 0, ',', '.'); ?></td>
+                        <td><a href="<?php echo base_url('index.php/gaji/detail_gaji/'.$i->id_gaji) ?>"><button class="btn btn-success" type="button">Detail</button></a></td>
+			</tr>
+		<?php endforeach; ?> <?php
 	}
 	public function fungsitambahgaji(){
 		$data = [
-			'id_proyek' => $this->input->post('id_proyek'),
-			'nama_karyawan' => $this->input->post('nama_karyawan'),
-			'bagian_karyawan' => $this->input->post('bagian_karyawan'),
+			'id_karyawan' => $this->input->post('id_karyawan'),
 			'bulan_terima' => $this->input->post('bulan_terima'),
 			'minggu_ke' => $this->input->post('minggu_ke'),
 			'tanggal_terima' => $this->input->post('tanggal_terima'),
@@ -73,7 +90,7 @@ class gaji extends CI_Controller {
 		if(is_null($id_gaji)) {
 			redirect(base_url('gaji/gaji_karyawan'));
 		} else {
-			$data['detail_gaji'] = $this->db-> get_where('gaji_karyawan', ['id_gaji'=> $id_gaji])->row_array();
+			$data['detail_gaji'] = $this->M_bagian->detailgaji($id_gaji)->row_array();
 			$this->load->view('Detail_Gaji_Karyawan', $data);
 		}
     }
@@ -87,7 +104,7 @@ class gaji extends CI_Controller {
 			$this->M_bagian->updategaji($id_gaji);
 			redirect('gaji/gajikaryawan');
 		}
-        $data["a"] = $this->M_bagian->getById($id_gaji);
+        $data["a"] = $this->M_bagian->detailgaji($id_gaji)->row();
         $this->load->view('Edit_Gaji_Karyawan', $data);
 	}
     public function hapus_gaji($id_gaji = null)
@@ -101,9 +118,9 @@ class gaji extends CI_Controller {
 			redirect('gaji/gajikaryawan');
 		}
     }
-	public function cetak_slip($id_gaji)
+	public function cetak_slip($id_gaji = null)
 	{
-		$data['detail_gaji'] = $this->M_bagian->getById($id_gaji);
+		$data['detail_gaji'] = $this->M_bagian->detailgaji($id_gaji)->row_array();
 		$this->load->view('Cetak_slip', $data);
 	}
 

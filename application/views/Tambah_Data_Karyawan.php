@@ -150,6 +150,17 @@
                         </div>
                       </div>
                       <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" name="bagian_karyawan" for="last-name">Nama Proyek <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                          <select type="text" id="id_proyek" name="id_proyek" required="required" class="form-control">
+                          <?php foreach($proyek as $r): ?>
+                             <option value="<?= $r->id_proyek ?>"><?= $r->nama_proyek ?></option>
+                          <?php endforeach; ?>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" name="bagian_karyawan" for="last-name">Bagian <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">

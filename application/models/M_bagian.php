@@ -5,8 +5,7 @@ class M_bagian extends CI_Model {
     private $_table = "gaji_karyawan";
 
    
-    public $nama_karyawan;
-    public $bagian_karyawan;
+    public $id_karyawan;
     public $bulan_terima;
     public $minggu_ke;
     public $tanggal_terima;
@@ -20,9 +19,32 @@ class M_bagian extends CI_Model {
     public $total_gaji;
 
 
-    public function getAll()
+    public function getAll($pilihproyek)
     {
-        return $this->db->get($this->_table)->result();
+        $this->db->select('gaji_karyawan.*, tambah_proyek.*,data_karyawan.*');
+        $this->db->from('gaji_karyawan');
+        $this->db->join('data_karyawan', 'gaji_karyawan.id_karyawan=data_karyawan.id_karyawan');
+        $this->db->join('tambah_proyek', 'data_karyawan.id_proyek=tambah_proyek.id_proyek');
+        $this->db->where('data_karyawan.id_proyek',$pilihproyek);
+        return $this->db->get()->result();
+    }
+    
+    public function getAll2()
+    {
+        
+        $this->db->select('data_karyawan.*, tambah_proyek.*');
+        $this->db->from('data_karyawan');
+        $this->db->join('tambah_proyek', 'data_karyawan.id_proyek=tambah_proyek.id_proyek');
+        
+        return $this->db->get()->result();
+    }
+    public function detailgaji($id_gaji){
+        $this->db->select('gaji_karyawan.*, tambah_proyek.*,data_karyawan.*');
+        $this->db->from('gaji_karyawan');
+        $this->db->join('data_karyawan', 'gaji_karyawan.id_karyawan=data_karyawan.id_karyawan');
+        $this->db->join('tambah_proyek', 'data_karyawan.id_proyek=tambah_proyek.id_proyek');
+        $this->db->where('gaji_karyawan.id_gaji',$id_gaji);
+        return $this->db->get();
     }
     public function getById($id_gaji)
     {
@@ -35,8 +57,7 @@ class M_bagian extends CI_Model {
     public function updategaji($id_gaji)
     {
         $post = $this->input->post();
-        $this->nama_karyawan = $post["nama_karyawan"];
-        $this->bagian_karyawan = $post["bagian_karyawan"];
+        $this->id_karyawan = $post["id_karyawan"];
         $this->bulan_terima = $post["bulan_terima"];
         $this->minggu_ke = $post["minggu_ke"];
         $this->tanggal_terima = $post["tanggal_terima"];

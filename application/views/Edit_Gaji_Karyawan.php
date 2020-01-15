@@ -143,25 +143,12 @@
                     <br />
                     <form action="<?php echo base_url('index.php/gaji/edit_gaji/'.$a->id_gaji) ?>" method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
-                    <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nama<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                          <input type="hidden"  value="<?php echo $a->id_gaji ?>">
-                          <input type="text" name="nama_karyawan" value="<?php echo $a->nama_karyawan ?>" id="first-name" required="required" class="form-control ">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                          <input type="text"  name="bagian_karyawan" value="<?php echo $a->bagian_karyawan ?>" id="first-name" required="required" class="form-control ">
-                        </div>
-                      </div>
+                   
                       <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bulan<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
+                        <input type="hidden"  name="id_karyawan" value="<?php echo $a->id_karyawan ?>" id="first-name" required="required" class="form-control ">
                           <input type="text" readonly="readonly"  name="bulan_terima" value="<?php echo $a->bulan_terima?>" id="first-name" required="required" class="form-control ">
                         </div>
                       </div>

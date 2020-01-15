@@ -134,11 +134,11 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Detail Data Gaji </h2>
+                    <h2>Detail Gaji Karyawan </h2>
                     <ul class="nav navbar-right panel_toolbox">
                     <a href="<?php echo base_url('index.php/gaji/cetak_slip/'.$detail_gaji['id_gaji']); ?>" target="_blank"><button class="btn btn-round btn-warning" type="button">
                     <i class="fa fa-print" aria-hidden="true"></i> Cetak Slip</button></a>
-                    <a href="<?php echo base_url('index.php/gaji/edit_gaji/'.$detail_gaji['id_gaji']); ?>"><button class="btn btn-round btn-primary" type="button">
+                    <a href="<?php echo base_url('index.php/gaji/edit_gaji/'.$detail_gaji['id_gaji']); ?>"><button class="btn btn-round btn-success" type="button">
                     <i class="fa fa-pencil" aria-hidden="true"></i> Edit</button></a>
                       <a href="<?php echo base_url('index.php/gaji/hapus_gaji/'.$detail_gaji['id_gaji']); ?>"><button type="submit" class="btn btn-round btn-danger">
                       <i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button></a>
@@ -146,103 +146,130 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <br />
+
                     <form method="post" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
-                    <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align"  for="first-name">Nama
-                        <span class="required">:</span>
+                    <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-4 col-sm-4 label-center"  for="first-name">1. Nama 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="required"></span><span class="required"></span><span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['nama_karyawan']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name"><?=$detail_gaji['nama_karyawan']; ?> 
                         <span class="required"></span>
                         </label>
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-5 col-sm-5 label-center" for="first-name">8. Upah Lembur
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                        <label class="col-form-label col-md-12" for="first-name">Rp. <?=$detail_gaji['upah_lembur']; ?> 
+                        </div>
+                      </div>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-4 col-sm-4 label-center" for="first-name">2. Bagian
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['bagian_karyawan']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name"><?=$detail_gaji['bagian_karyawan']; ?> 
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bulan<span class="required">:</span>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-5 col-sm-5 label-center" for="first-name">9. Askes
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['bulan_terima']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name">Rp. <?=$detail_gaji['asuransi_kesehatan']; ?> 
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Minggu Ke<span class="required">:</span>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-4 col-sm-4 label-center" for="first-name">3. Bulan
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['minggu_ke']; ?> 
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Tanggal Terima<span class="required">:</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['tanggal_terima']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name"><?=$detail_gaji['bulan_terima']; ?> 
                         </div>
                       </div>
 
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Ongkos Kerja <span class="required">:</span>
+
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-5 col-sm-5 label-center" for="last-name">10. Uang Transport
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['ongkos_kerja']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name">Rp. <?=$detail_gaji['uang_transport']; ?> 
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Uang Makan<span class="required">:</span>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-4 col-sm-4 label-center" for="first-name">4. Minggu Ke
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['uang_makan']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name"><?=$detail_gaji['minggu_ke']; ?> 
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Upah Lembur<span class="required">:</span>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-5 col-sm-5 label-center" for="first-name">11. Tunjangan Jabatan
+                        &nbsp;&nbsp;&nbsp;  
+                        <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['upah_lembur']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name">Rp. <?=$detail_gaji['upah_lembur']; ?> 
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Asuransi Kesehatan<span class="required">:</span>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-4 col-sm-4 label-center" for="first-name">5. Tanggal Terima
+                        &nbsp;&nbsp;&nbsp;  
+                        <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['asuransi_kesehatan']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name"><?=$detail_gaji['tanggal_terima']; ?> 
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Uang Transport<span class="required">:</span>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-5 col-sm-5 label-center" for="first-name">12. Bonus
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['uang_transport']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name">Rp. <?=$detail_gaji['bonus']; ?> 
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Tunjangan Jabatan<span class="required">:</span>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-4 col-sm-4 label-center" for="first-name">6. Ongkos Kerja
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                        <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['tunjangan_jabatan']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name">Rp. <?=$detail_gaji['ongkos_kerja']; ?> 
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bonus<span class="required">:</span>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-5 col-sm-5 label-center" for="first-name">13. Total Gaji
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['bonus']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name">Rp. <?=$detail_gaji['total_gaji']; ?> 
                         </div>
                       </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Total Gaji <span class="required">:</span>
+                      <div class="item form-group col-sm-6 label-center">
+                        <label class="col-form-label col-md-4 col-sm-4 label-center" for="last-name">7. Uang Makan
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                        <span class="required">:</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                        <label class="col-form-label col-md-6" for="first-name"><?=$detail_gaji['total_gaji']; ?> 
+                        <label class="col-form-label col-md-12" for="first-name">Rp. <?=$detail_gaji['uang_makan']; ?> 
                         </div>
                       </div>
 

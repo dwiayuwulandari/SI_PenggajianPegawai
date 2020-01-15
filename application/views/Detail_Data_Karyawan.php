@@ -137,7 +137,7 @@
                   <div class="x_title">
                     <h2>Detail Data Karyawan </h2>
                     <ul class="nav navbar-right panel_toolbox">
-                      <a href="<?php echo base_url('index.php/karyawan/edit_karyawan/'.$detail_karyawan['id_karyawan']); ?>"><button class="btn btn-round btn-primary" type="button">
+                      <a href="<?php echo base_url('index.php/karyawan/edit_karyawan/'.$detail_karyawan['id_karyawan']); ?>"><button class="btn btn-round btn-success" type="button">
                       <i class="fa fa-pencil" aria-hidden="true"></i> Edit</button></a>
                       <a href="<?php echo base_url('index.php/karyawan/hapus_karyawan/'.$detail_karyawan['id_karyawan']); ?>"><button type="submit" class="btn btn-round btn-danger">
                       <i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button></a>

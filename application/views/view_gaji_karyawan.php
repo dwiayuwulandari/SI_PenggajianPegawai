@@ -124,8 +124,12 @@
               <div class="title_left">
                 <h3>Gaji Karyawan </h3>
               </div>
-
               <div class="title_right">
+              <ul class="nav navbar-right panel_toolbox">
+                    <a href="<?php echo base_url()."index.php/gaji/Tambah_Data_Gaji_Karyawan"; ?>" class="btn btn-success btn-round btn-lg">
+                <i class="fa fa-plus" aria-hidden="true"></i> Gaji Karyawan </a>
+                    </ul>
+
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
                    
@@ -133,17 +137,23 @@
                 </div>
               </div>
             </div>
-
-            <?php   
-                        
-            foreach ($proyek as $a): ?>
             <div class="clearfix"></div>
 
             <div class="row">
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
+                <div class="col-md-6">
+                  <select id="pilihproyek" name="proyek1" class="form-control custom-select col-10" style="border-radius: 10px;">
+                    <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------------ Pilih Proyek ------------</option>
+                      <?php foreach($proyek as $r): ?>
+                             <option value="<?= $r->id_proyek ?>"><?= $r->nama_proyek ?></option>
+                      <?php endforeach; ?>
+
+                  </select>
+                </div>
                   <div class="x_title">
                     <ul class="nav navbar-right panel_toolbox">
+
                     </ul>
                     <div class="clearfix"></div>
                   </div>
@@ -151,7 +161,6 @@
                       <div class="row">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
-                            <h1> Nama Proyek : <?php echo $a->nama_proyek ?></h1>
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
@@ -167,38 +176,14 @@
                       </thead>
 
 
-                      <tbody>
+                      <tbody id="tampilgaji">
 
-                      <?php
-                       $no=1;
-                      $coba = $this->db->query("SELECT * FROM gaji_karyawan JOIN tambah_proyek ON gaji_karyawan.id_proyek=tambah_proyek.id_proyek WHERE gaji_karyawan.id_proyek='$a->id_proyek'")->result(); 
-                      foreach($coba as $i): ?>
-                      <tr>
-                      
-                        <td><?php echo $no++; ?></td>
-                        <td><?php echo $i-> nama_karyawan ?></td>
-                        <td><?php echo $i-> bagian_karyawan ?></td>
-                        <td><?php echo $i-> bulan_terima ?></td>
-                        <td><?php echo $i-> minggu_ke ?></td>
-                        <td><?php echo $i-> tanggal_terima ?></td>
-                        <td>Rp. <?php echo number_format ($i-> total_gaji, 0, ',', '.'); ?></td>
-
-                        <td>
-                        <a href="<?php echo base_url('index.php/gaji/detail_gaji/'.$i->id_gaji) ?>"><button class="btn btn-success" type="button">Detail</button></a>
-                          
-                        </td>
-
-                    
-                      </tr>
-                      <?php 
-                        endforeach;?>
+                  
                       </tbody>
                     </table>
                          <div class="ln_solid"></div>
                       <div class="item form-group">
                         <div class="col-md-6 col-sm-6 offset-md-18">
-                          <a href="<?php echo base_url('index.php/gaji/Tambah_Data_Gaji_Karyawan/'.$a->id_proyek); ?>">
-                          <button type="submit" class="btn btn-success"> <i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Gaji Karyawan</button></a>
                         </div>
                       </div>
                   </div>
@@ -207,9 +192,6 @@
             </div>
             
                 </div>
-                <?php 
-                        
-                      endforeach;?>
               </div>
 
             </div>
@@ -260,3 +242,19 @@
 
   </body>
 </html>
+
+<script>
+    $(document).ready(function() {
+      $("#pilihproyek").on('change', function(){ 
+        var id_proyek = $('#pilihproyek').val();
+        $.ajax({
+        type: 'POST',
+        url: '<?= base_url('index.php/gaji/load2') ?>',
+        data: {'id' : id_proyek },
+        success: function(data) {
+          $("#tampilgaji").html(data);
+        }
+      })
+      })
+    })
+</script>

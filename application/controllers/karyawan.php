@@ -10,7 +10,9 @@ class karyawan extends CI_Controller {
 		$this->load->model('M_data');
 		$this->load->model('M_proyek');
 		$this->load->model('Crud_karyawan');
-		$this->load->helper(array('url'));
+		$this->load->helper(array('url', 'form'));
+		$this->load->helper('array');
+		$this->load->helper('url');
     }
 	
 	/**
@@ -40,8 +42,30 @@ class karyawan extends CI_Controller {
 		// $data['karyawan']=$this->M_data->getAll();
 		$this->load->view('view_karyawan',$data);
 	}
+
+
+
+	public function load2()
+	{
+		$id = $_POST['id'];
+		$test = $this->M_data->getAll($id);
+		$no=1;
+		foreach($test as $i) : ?>
+			<tr>
+						<td><?php echo $no++; ?></td>
+                        <td><?php echo $i->nama_karyawan ?></td>
+                        <td><?php echo $i->bagian_karyawan ?></td>
+                        <td><?php echo $i->jenis_kelamin ?></td>
+                        <td><?php echo $i->alamat_karyawan ?></td>
+                        <td><?php echo $i->no_rekening ?></td>
+                        <td><?php echo $i->nomer_hp ?></td>
+                        <td><a href="<?php echo base_url('index.php/karyawan/detail_karyawan/'.$i->id_karyawan) ?>"><button class="btn btn-success" type="button">Detail</button></a></td>
+			</tr>
+		<?php endforeach; ?> <?php
+	}
 	public function Tambah_Data_Karyawan()
 	{
+		$data['proyek']=$this->M_proyek->getAll();
 		$id_proyek = $this->uri->segment(3);
 		// $data_session = array('id' => $id_proyek);
 		// $this->session->set_userdata($data_session);
@@ -51,7 +75,7 @@ class karyawan extends CI_Controller {
 			redirect('karyawan/datakaryawan');
 		}
 		
-		$this->load->view('Tambah_Data_Karyawan', $id_proyek);
+		$this->load->view('Tambah_Data_Karyawan', $data);
 	}
 
 	public function fungsitambahkaryawan($id_proyek = null){

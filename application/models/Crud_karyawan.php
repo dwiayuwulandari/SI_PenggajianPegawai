@@ -38,7 +38,7 @@ class Crud_karyawan extends CI_Model {
    {
      $config['upload_path']     = './assets/images/';
      $config['allowed_types']   = 'gif|jpg|png|JPG';
-     $config['max_size']        = 9048;
+     $config['max_size']        = 99999999048;
      $config['overwrite']       = true;
      $config['file_name']       = $_FILES['foto_ktp']['name'];
      $this->load->library('upload', $config);

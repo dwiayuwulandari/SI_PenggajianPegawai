@@ -100,7 +100,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="images/img.jpg" alt="">Imam Basori
+                      <img src="images/img.jpg" alt="">Admin
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       
@@ -137,10 +137,11 @@
             <div class="clearfix"></div>
 
             <div class="row">
-              <div class="col-md-12 col-sm-12 ">
+            <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
                     <ul class="nav navbar-right panel_toolbox">
+                      
                     </ul>
                     <div class="clearfix"></div>
                   </div>
@@ -148,8 +149,11 @@
                       <div class="row">
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
-                    <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-                      <thead>
+                    <p class="text-muted font-13 m-b-30">
+                    Laporan bulanan proyek tentang kegiatan yang sudah dijalankan selama satu bulan oleh CV. Karya Agung Jaya untuk kemudian dituangkan dalam bentuk tertulis, laporan bulanan ini dibuat oleh kontraktor atau konsultan pengawas untuk diberikan kepada owner atau pemilik proyek. 
+                    </p>
+                    <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
                         <tr>
                           <th>No</th>
                           <th>Nama Proyek</th>
@@ -179,7 +183,7 @@
                      </tbody>
                     </table>
                   </div>
-                  </div>
+                </div>
               </div>
             </div>
                 </div>

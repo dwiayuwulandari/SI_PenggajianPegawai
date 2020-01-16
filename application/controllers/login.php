@@ -36,8 +36,6 @@ class login extends CI_Controller {
 
 		if ($admin) {
 
-			if ($admin['active'] == 1) {
-
 				if ($cekpass->num_rows() > 0) {
 
 					$data = [
@@ -45,20 +43,16 @@ class login extends CI_Controller {
 					];
 					$data['logged_in'] = TRUE;
 					$this->session->set_userdata($data);
-					redirect('beranda');
+					redirect('Welcome');
 				} else {
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf password yang anda masukkan salah!</div>');
-					redirect('Welcome');
+					redirect('login');
 				}
-			} else {
-
-				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf username yang anda masukkan tidak aktif!</div>');
-				redirect('Welcome');
-			}
+			
 		} else {
 
 			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Maaf username yang anda masukkan salah!</div>');
-			redirect('Welcome');
+			redirect('login');
 		}
 	}
 

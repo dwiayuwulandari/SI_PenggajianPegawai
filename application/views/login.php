@@ -32,7 +32,7 @@
           <section class="login_content">
             <?= $this->session->flashdata('message'); ?>
             <form role="form" method="post" action="<?php echo site_url('Login/index'); ?>">
-              <h1>Login Form</h1>
+              <h1>L O G I N</h1>
               <div>
                 <input class="form-control" placeholder="Username" type="username" id="username" name="username" />
               </div>
@@ -48,16 +48,9 @@
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Mau Masuk ?
-                  <a class="to_register">Silahkan Login Terlebih Dahulu </a>
-                </p>
-
                 <div class="clearfix"></div>
-                <br />
-
                 <div>
-                  <h1></i>CV. Karya Agung Jaya</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <p>Silahkan Login terlebih dahulu</p>
                 </div>
               </div>
             </form role="form" method="post" action="<?php echo site_url('Login/index'); ?>">

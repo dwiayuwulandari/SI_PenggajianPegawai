@@ -32,7 +32,7 @@
           <section class="login_content">
             <?= $this->session->flashdata('message'); ?>
             <form role="form" method="post" action="<?php echo site_url('Login/index'); ?>">
-              <h1>L O G I N</h1>
+              <h1>W e l c o m e</h1>
               <div>
                 <input class="form-control" placeholder="Username" type="username" id="username" name="username" />
               </div>

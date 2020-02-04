@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	  
     <title>CV. Karya Agung Jaya</title>
+    <link rel="icon" type="image/jpg" href="<?php echo base_url();?>assets/sigap/production/images/icon.jpg" />
 
     <!-- Bootstrap -->
     <link href="<?php echo base_url();?>assets/sigap/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -145,7 +146,7 @@
 
                       
                       <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Bagian<span class="required">*</span>
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nama<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                           <select type="text" name="id_karyawan" id="first-name" required="required" class="form-control ">

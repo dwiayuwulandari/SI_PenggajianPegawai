@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>CV. Karya Agung Jaya</title>
+    <link rel="icon" type="image/jpg" href="<?php echo base_url();?>assets/sigap/production/images/icon.jpg" />
 
     <!-- Bootstrap -->
     <link href="<?php echo base_url();?>assets/sigap/cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -189,7 +190,7 @@
                           <th>No </th>
                           <th>Nama Proyek</th>
                           <th>Alamat Proyek</th>
-                          <th>Aksi</th>
+                          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aksi</th>
                       
                           
                         </tr>
@@ -203,8 +204,11 @@
                           <td><?php echo $no++; ?></td>
                           <td><?php echo $a->nama_proyek ?></td>
                           <td><?php echo $a->alamat_proyek ?></td>
-                          <td><a href="<?php echo base_url('index.php/Welcome/hapusAll/'.$a->id_proyek); ?>"><button type="submit" class="btn btn-round btn-danger">
-                          <i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button></a></td>
+                          <!-- <td><a href="<?php echo base_url('index.php/Welcome/hapusAll/'.$a->id_proyek); ?>"><button type="submit" class="btn btn-round btn-danger">
+                          <i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button></a></td> -->
+                          
+                          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <a type="button" href="<?= base_url('index.php/Welcome/hapusAll/' . $a->id_proyek); ?>" onclick="return confirm('Apakah Anda Ingin Menghapus Data  ?');" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hapus" class="fa fa-trash-o"> Hapus</a></td>
 
                         </tr>
                       <?php     
@@ -222,6 +226,7 @@
           </div>
         </div>
         <!-- /page content -->
+
 
         <!-- footer content -->
         <footer>

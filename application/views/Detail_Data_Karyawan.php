@@ -75,20 +75,6 @@
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-            </div>
             <!-- /menu footer buttons -->
           </div>
         </div>
@@ -139,7 +125,7 @@
                     <h2>Detail Data Karyawan </h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <a href="<?php echo base_url('index.php/karyawan/edit_karyawan/'.$detail_karyawan['id_karyawan']); ?>"><button class="btn btn-round btn-success" type="button">
-                      <i class="fa fa-pencil" aria-hidden="true"></i> Edit</button></a>
+                      <i class="fa fa-edit" aria-hidden="true"></i> Edit</button></a>
                       <a href="<?php echo base_url('index.php/karyawan/hapus_karyawan/'.$detail_karyawan['id_karyawan']); ?>"><button type="submit" class="btn btn-round btn-danger">
                       <i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button></a>
                     </ul>

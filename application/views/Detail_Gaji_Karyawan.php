@@ -75,20 +75,6 @@
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-            </div>
             <!-- /menu footer buttons -->
           </div>
         </div>
@@ -140,7 +126,7 @@
                     <a href="<?php echo base_url('index.php/gaji/cetak_slip/'.$detail_gaji['id_gaji']); ?>" target="_blank"><button class="btn btn-round btn-warning" type="button">
                     <i class="fa fa-print" aria-hidden="true"></i> Cetak Slip</button></a>
                     <a href="<?php echo base_url('index.php/gaji/edit_gaji/'.$detail_gaji['id_gaji']); ?>"><button class="btn btn-round btn-success" type="button">
-                    <i class="fa fa-pencil" aria-hidden="true"></i> Edit</button></a>
+                    <i class="fa fa-edit" aria-hidden="true"></i> Edit</button></a>
                       <a href="<?php echo base_url('index.php/gaji/hapus_gaji/'.$detail_gaji['id_gaji']); ?>"><button type="submit" class="btn btn-round btn-danger">
                       <i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button></a>
                     </ul>
